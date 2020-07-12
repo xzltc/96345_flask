@@ -1,0 +1,58 @@
+[2020-07-11 23:32:31,319]-[base.py:120]-WARNING: Run time of job "update_feedback (trigger: cron[day_of_week='0-6', hour='8,10,12,14,16,18,20,22,23', minute='31'], next run at: 2020-07-12 08:31:00 CST)" was missed by 0:01:31.319452
+[2020-07-12 00:49:47,860]-[base.py:440]-INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2020-07-12 00:49:47,860]-[base.py:440]-INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2020-07-12 00:49:47,862]-[base.py:881]-INFO: Added job "insert_feedback" to job store "default"
+[2020-07-12 00:49:47,863]-[base.py:881]-INFO: Added job "update_feedback" to job store "default"
+[2020-07-12 00:49:47,863]-[base.py:166]-INFO: Scheduler started
+[2020-07-12 00:49:47,868]-[_internal.py:113]-INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2020-07-12 00:50:03,375]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 00:50:03] "[37mGET / HTTP/1.1[0m" 200 -
+[2020-07-12 00:50:04,936]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 00:50:04] "[37mGET /increaseBarChart/68/1 HTTP/1.1[0m" 200 -
+[2020-07-12 00:50:04,946]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 00:50:04] "[37mGET /barChart/68 HTTP/1.1[0m" 200 -
+[2020-07-12 00:50:17,148]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 00:50:17] "[37mGET /increaseBarChart/3/1 HTTP/1.1[0m" 200 -
+[2020-07-12 00:50:17,150]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 00:50:17] "[37mGET /barChart/3 HTTP/1.1[0m" 200 -
+[2020-07-12 01:00:00,027]-[base.py:123]-INFO: Running job "insert_feedback (trigger: cron[day_of_week='0-6', hour='1'], next run at: 2020-07-12 01:00:00 CST)" (scheduled at 2020-07-12 01:00:00+08:00)
+[2020-07-12 01:00:00,031]-[db.py:36]-INFO: 查询所有类目成功！
+[2020-07-12 01:00:00,259]-[spider.py:65]-INFO: ---总页号数为---：1
+[2020-07-12 01:00:03,515]-[db.py:127]-INFO: 查询merchant成功！！
+[2020-07-12 01:00:03,523]-[db.py:78]-INFO: 每日首次插入feedback数据成功！！
+[2020-07-12 01:00:04,161]-[spider.py:65]-INFO: ---总页号数为---：4
+[2020-07-12 01:00:33,403]-[db.py:127]-INFO: 查询merchant成功！！
+[2020-07-12 01:00:33,416]-[db.py:78]-INFO: 每日首次插入feedback数据成功！！
+[2020-07-12 01:00:33,970]-[spider.py:65]-INFO: ---总页号数为---：3
+[2020-07-12 01:00:49,695]-[db.py:127]-INFO: 查询merchant成功！！
+[2020-07-12 01:00:49,707]-[db.py:78]-INFO: 每日首次插入feedback数据成功！！
+[2020-07-12 01:00:50,381]-[spider.py:65]-INFO: ---总页号数为---：4
+[2020-07-12 01:01:06,717]-[db.py:127]-INFO: 查询merchant成功！！
+[2020-07-12 01:01:06,731]-[db.py:78]-INFO: 每日首次插入feedback数据成功！！
+[2020-07-12 01:01:07,096]-[spider.py:65]-INFO: ---总页号数为---：2
+[2020-07-12 01:01:10,358]-[db.py:127]-INFO: 查询merchant成功！！
+[2020-07-12 01:01:10,365]-[db.py:78]-INFO: 每日首次插入feedback数据成功！！
+[2020-07-12 01:01:10,865]-[spider.py:65]-INFO: ---总页号数为---：3
+[2020-07-12 01:01:33,257]-[db.py:127]-INFO: 查询merchant成功！！
+[2020-07-12 01:01:33,274]-[db.py:78]-INFO: 每日首次插入feedback数据成功！！
+[2020-07-12 01:01:33,859]-[spider.py:65]-INFO: ---总页号数为---：3
+[2020-07-12 01:01:49,477]-[db.py:127]-INFO: 查询merchant成功！！
+[2020-07-12 01:01:49,491]-[db.py:78]-INFO: 每日首次插入feedback数据成功！！
+[2020-07-12 01:01:49,906]-[spider.py:65]-INFO: ---总页号数为---：1
+[2020-07-12 01:01:55,698]-[db.py:127]-INFO: 查询merchant成功！！
+[2020-07-12 01:01:55,707]-[db.py:78]-INFO: 每日首次插入feedback数据成功！！
+[2020-07-12 01:01:55,707]-[base.py:144]-INFO: Job "insert_feedback (trigger: cron[day_of_week='0-6', hour='1'], next run at: 2020-07-13 01:00:00 CST)" executed successfully
+[2020-07-12 01:05:39,928]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 01:05:39] "[37mGET / HTTP/1.1[0m" 200 -
+[2020-07-12 01:05:40,665]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 01:05:40] "[37mGET /barChart/68 HTTP/1.1[0m" 200 -
+[2020-07-12 01:05:40,680]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 01:05:40] "[37mGET /increaseBarChart/68/1 HTTP/1.1[0m" 200 -
+[2020-07-12 01:05:49,937]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 01:05:49] "[37mGET /barChart/1 HTTP/1.1[0m" 200 -
+[2020-07-12 01:05:49,939]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 01:05:49] "[37mGET /increaseBarChart/1/1 HTTP/1.1[0m" 200 -
+[2020-07-12 01:05:52,610]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 01:05:52] "[37mGET /barChart/68 HTTP/1.1[0m" 200 -
+[2020-07-12 01:05:52,619]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 01:05:52] "[37mGET /increaseBarChart/68/1 HTTP/1.1[0m" 200 -
+[2020-07-12 10:15:39,541]-[base.py:440]-INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2020-07-12 10:15:39,542]-[base.py:440]-INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2020-07-12 10:15:39,543]-[base.py:881]-INFO: Added job "insert_feedback" to job store "default"
+[2020-07-12 10:15:39,544]-[base.py:881]-INFO: Added job "update_feedback" to job store "default"
+[2020-07-12 10:15:39,544]-[base.py:166]-INFO: Scheduler started
+[2020-07-12 10:15:39,555]-[_internal.py:113]-INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2020-07-12 12:05:32,737]-[base.py:120]-WARNING: Run time of job "update_feedback (trigger: cron[day_of_week='0-6', hour='8,10,12,14,16,18,20,22'], next run at: 2020-07-12 12:00:00 CST)" was missed by 0:05:32.737066
+[2020-07-12 12:44:33,167]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 12:44:33] "[37mGET / HTTP/1.1[0m" 200 -
+[2020-07-12 12:44:33,276]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 12:44:33] "[36mGET /static/assets/css/style.css HTTP/1.1[0m" 304 -
+[2020-07-12 12:44:33,529]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 12:44:33] "[36mGET /static/assets/js/main.min.js HTTP/1.1[0m" 304 -
+[2020-07-12 12:44:38,303]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 12:44:38] "[37mGET /barChart/68 HTTP/1.1[0m" 200 -
+[2020-07-12 12:44:38,307]-[_internal.py:113]-INFO: 127.0.0.1 - - [12/Jul/2020 12:44:38] "[37mGET /increaseBarChart/68/1 HTTP/1.1[0m" 200 -
