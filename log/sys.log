@@ -1,0 +1,80 @@
+[2020-07-15 17:13:51,485]-[base.py:440]-INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2020-07-15 17:13:51,491]-[base.py:440]-INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2020-07-15 17:13:51,497]-[base.py:881]-INFO: Added job "insert_feedback" to job store "default"
+[2020-07-15 17:13:51,506]-[base.py:881]-INFO: Added job "update_feedback" to job store "default"
+[2020-07-15 17:13:51,506]-[base.py:166]-INFO: Scheduler started
+[2020-07-15 17:13:51,515]-[_internal.py:113]-INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2020-07-15 17:13:54,215]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:13:54] "[37mGET / HTTP/1.1[0m" 200 -
+[2020-07-15 17:13:54,483]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:13:54] "[36mGET /static/assets/css/style.css HTTP/1.1[0m" 304 -
+[2020-07-15 17:13:54,488]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:13:54] "[36mGET /static/assets/js/main.min.js HTTP/1.1[0m" 304 -
+[2020-07-15 17:14:41,840]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:14:41] "[37mGET / HTTP/1.1[0m" 200 -
+[2020-07-15 17:15:14,640]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:15:14] "[37mGET / HTTP/1.1[0m" 200 -
+[2020-07-15 17:15:50,692]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:15:50] "[37mGET / HTTP/1.1[0m" 200 -
+[2020-07-15 17:16:16,119]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:16:16] "[37mGET / HTTP/1.1[0m" 200 -
+[2020-07-15 17:16:18,026]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:16:18] "[37mGET /increaseBarChart/68/1 HTTP/1.1[0m" 200 -
+[2020-07-15 17:16:18,033]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:16:18] "[37mGET /barChart/68 HTTP/1.1[0m" 200 -
+[2020-07-15 17:16:26,306]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:16:26] "[37mGET /barChart/3 HTTP/1.1[0m" 200 -
+[2020-07-15 17:16:26,316]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:16:26] "[37mGET /increaseBarChart/3/1 HTTP/1.1[0m" 200 -
+[2020-07-15 17:16:27,869]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:16:27] "[37mGET /barChart/68 HTTP/1.1[0m" 200 -
+[2020-07-15 17:16:27,878]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:16:27] "[37mGET /increaseBarChart/68/1 HTTP/1.1[0m" 200 -
+[2020-07-15 17:16:30,405]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:16:30] "[37mGET /barChart/65 HTTP/1.1[0m" 200 -
+[2020-07-15 17:16:30,406]-[_internal.py:113]-INFO: 127.0.0.1 - - [15/Jul/2020 17:16:30] "[37mGET /increaseBarChart/65/1 HTTP/1.1[0m" 200 -
+[2020-07-16 14:25:28,678]-[base.py:440]-INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2020-07-16 14:25:28,679]-[base.py:440]-INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2020-07-16 14:25:28,680]-[base.py:881]-INFO: Added job "insert_feedback" to job store "default"
+[2020-07-16 14:25:28,681]-[base.py:881]-INFO: Added job "update_feedback" to job store "default"
+[2020-07-16 14:25:28,681]-[base.py:166]-INFO: Scheduler started
+[2020-07-16 14:25:28,684]-[_internal.py:113]-INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2020-07-16 14:25:36,734]-[_internal.py:113]-INFO: 127.0.0.1 - - [16/Jul/2020 14:25:36] "[37mGET / HTTP/1.1[0m" 200 -
+[2020-07-16 14:25:36,925]-[_internal.py:113]-INFO: 127.0.0.1 - - [16/Jul/2020 14:25:36] "[36mGET /static/assets/css/style.css HTTP/1.1[0m" 304 -
+[2020-07-16 14:25:37,131]-[_internal.py:113]-INFO: 127.0.0.1 - - [16/Jul/2020 14:25:37] "[36mGET /static/assets/js/main.min.js HTTP/1.1[0m" 304 -
+[2020-07-16 14:25:39,202]-[_internal.py:113]-INFO: 127.0.0.1 - - [16/Jul/2020 14:25:39] "[37mGET /barChart/68 HTTP/1.1[0m" 200 -
+[2020-07-16 14:25:39,205]-[_internal.py:113]-INFO: 127.0.0.1 - - [16/Jul/2020 14:25:39] "[37mGET /increaseBarChart/68/1 HTTP/1.1[0m" 200 -
+[2020-07-16 14:26:10,331]-[base.py:440]-INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2020-07-16 14:26:10,332]-[base.py:440]-INFO: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[2020-07-16 14:26:10,336]-[base.py:881]-INFO: Added job "insert_feedback" to job store "default"
+[2020-07-16 14:26:10,337]-[base.py:881]-INFO: Added job "update_feedback" to job store "default"
+[2020-07-16 14:26:10,337]-[base.py:166]-INFO: Scheduler started
+[2020-07-16 14:26:10,343]-[_internal.py:113]-INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2020-07-16 14:27:00,001]-[base.py:123]-INFO: Running job "insert_feedback (trigger: cron[day_of_week='0-6', hour='14', minute='27'], next run at: 2020-07-16 14:27:00 CST)" (scheduled at 2020-07-16 14:27:00+08:00)
+[2020-07-16 14:27:00,009]-[server.py:104]-INFO: 插入定时任务启动 2020-07-16 14:27:00.009775
+[2020-07-16 14:27:00,013]-[db.py:36]-INFO: 查询所有类目成功！
+[2020-07-16 14:27:04,380]-[spider.py:125]-ERROR: Get Page Failed 500
+[2020-07-16 14:27:04,385]-[base.py:131]-ERROR: Job "insert_feedback (trigger: cron[day_of_week='0-6', hour='14', minute='27'], next run at: 2020-07-17 14:27:00 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/apple/PycharmProjects/96345_flask/server.py", line 105, in insert_feedback
+    check_update.every_day_update_feedback(param, base_url, header, session, 0)
+  File "/Users/apple/PycharmProjects/96345_flask/check_update.py", line 35, in every_day_update_feedback
+    all_merchant_info = spider.get_all_pages_service_info(base_url, header, param, str(item_id))
+  File "/Users/apple/PycharmProjects/96345_flask/spider.py", line 44, in get_all_pages_service_info
+    soup = BeautifulSoup(r.text, 'html.parser')
+AttributeError: 'NoneType' object has no attribute 'text'
+[2020-07-16 14:56:05,572]-[base.py:705]-ERROR: Exception during reset or similar
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 697, in _finalize_fairy
+    fairy._reset(pool)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 893, in _reset
+    pool._dialect.do_rollback(self)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 543, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 123145485463552 and this is thread id 4654198208.
+[2020-07-16 14:56:05,577]-[base.py:272]-ERROR: Exception closing connection <sqlite3.Connection object at 0x7fddea3555d0>
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 697, in _finalize_fairy
+    fairy._reset(pool)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 893, in _reset
+    pool._dialect.do_rollback(self)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 543, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 123145485463552 and this is thread id 4654198208.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 270, in _close_connection
+    self._dialect.do_close(connection)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 549, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 123145485463552 and this is thread id 4654198208.

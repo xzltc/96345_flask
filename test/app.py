@@ -10,28 +10,28 @@ from pyecharts.charts import Bar
 from pyecharts.faker import Faker
 import tools
 
-app = Flask(__name__)
+app_test = Flask(__name__)
 
 
-@app.route('/')
+@app_test.route('/')
 def hello_world():
     return 'Hello World!'
 
 
-@app.route('/index')
+@app_test.route('/index')
 def index():
     # get_bar_chart()
     return render_template('index.html')
 
 
-@app.route("/barChart/<int:item_id>")
+@app_test.route("/barChart/<int:item_id>")
 def get_bar_chart(item_id):
     # c = bar_base()
     c = bar_test(item_id)
     return c.dump_options_with_quotes()
 
 
-@app.route("/increaseBarChart")
+@app_test.route("/increaseBarChart")
 def get_increase_bar_chart():
     # c = bar_base()
     c = bar_test_two()
@@ -66,7 +66,7 @@ def bar_test_three(day):
     return c
 
 
-@app.route("/increaseBarChart2/<int:day>")
+@app_test.route("/increaseBarChart2/<int:day>")
 def get_increase_bar_chart2(day):
     # c = bar_base()
     c = bar_test_three(day)
@@ -154,7 +154,7 @@ def bar_base() -> Bar:
     return c2
 
 
-@app.route('/test')
+@app_test.route('/test')
 def echart_test():
     category = 1
     # 创建Session 数据库相关操作
@@ -165,10 +165,10 @@ def echart_test():
     return str(len(res))
 
 
-@app.route('/bar')
+@app_test.route('/bar')
 def bar():
     r = 1
 
 
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()

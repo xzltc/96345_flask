@@ -89,7 +89,7 @@ def insert_merchant(session, info):
     try:
         session.add(merchant)
         session.commit()
-        log.info("插入一个商户信息成功！！Id:%d Item:%d Name:%s"%(info['id'],info['item'],info['name']))
+        log.warning("插入一个商户信息成功！！Id:%d Item:%d Name:%s" % (int(info['id']), int(info['item']), info['name']))
         log.debug("------------------更新商户结束------------------\n")
     except exc.SQLAlchemyError as e:
         log.error("插入一个商户信息失败！！")

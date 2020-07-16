@@ -116,5 +116,5 @@ def get_item_merchants_timelaspes_increase(session, item_id, day_near, day_far):
 # 取得单例模式的日志ogger对象
 def get_single_logger():
     # 第一个c_level,第二个f_level 控制日志等级
-    log = C_logger('sys.log', logging.DEBUG, logging.INFO).get_logger()
+    log = C_logger('./log/sys.log', logging.DEBUG, logging.INFO).get_logger()
     return log

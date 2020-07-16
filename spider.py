@@ -110,7 +110,7 @@ def get_personal_service_data(all_info):
 
 
 # 得到指定网页内容 return response对象
-def ask_URL(url, param={}, time=10):
+def ask_URL(url, param={}, time=20):
     # 附加头，模拟浏览器访问
     header = {"content-type": "application/json",
               "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) "

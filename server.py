@@ -16,7 +16,6 @@ header = "/centre/life_service/"
 # 日志模块实例化一次，统一使用，保证所有都在root logger下
 logger = tools.get_single_logger()
 
-
 # Flask web端所有功能封装在server中
 app = Flask(__name__)
 
@@ -102,7 +101,7 @@ def increase_bar(day, item_id) -> Bar:
 def insert_feedback():
     # 创建Session 数据库相关操作
     session = db.get_db_session(db_path)
-    print("插入定时任务启动 ", tools.get_now())
+    logger.info("插入定时任务启动 %s" % str(tools.get_now()))
     check_update.every_day_update_feedback(param, base_url, header, session, 0)
     session.close()
 
@@ -110,17 +109,18 @@ def insert_feedback():
 # 每天多次更新操作 定时任务
 def update_feedback():
     session = db.get_db_session(db_path)
-    print("更新定时任务启动 ", tools.get_now())
+    logger.info("更新定时任务启动 %s " % str(tools.get_now()))
+    # print("更新定时任务启动 ", tools.get_now())
     check_update.every_day_update_feedback(param, base_url, header, session, 1)
     session.close()
 
 
 sched = BackgroundScheduler(daemon=True)
 # 时区是个大坑 淦 不要搞什么UTC UTC-8 老老实实用本地时间最简单
-sched.add_job(insert_feedback, 'cron', day_of_week='0-6', hour='1', id='insert_feedback')
-sched.add_job(update_feedback, 'cron', day_of_week='0-6', hour='8,10,12,14,16,18,20,22', id='update_feedback')
+sched.add_job(insert_feedback, 'cron', day_of_week='0-6', hour='14', minute='27', id='insert_feedback')
+sched.add_job(update_feedback, 'cron', day_of_week='0-6', hour='8,10,12,13,14,16,18,21,23', minute='24',
+              id='update_feedback')
 sched.start()
-
 
 if __name__ == "__main__":
     app.run()
