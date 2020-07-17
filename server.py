@@ -4,7 +4,8 @@ from pyecharts.globals import ThemeType
 from pyecharts import options as opts
 from pyecharts.charts import Bar
 import check_update
-
+import atexit
+import fcntl
 import tools
 import db
 
@@ -42,7 +43,7 @@ def item_bar(item_id) -> Bar:
     # session = Session()
     session = db.get_db_session(db_path)
     # 取得所有当前类目数据库数据 元祖类型 降序
-    result = db.query_date_feedback_info(session, item_id, tools.get_previous_date())
+    result = db.query_date_feedback_info(session, item_id, tools.get_assign_year_date(2))
     res = tools.change_2_pyechart_format(result)
 
     t = (
@@ -115,12 +116,39 @@ def update_feedback():
     session.close()
 
 
-sched = BackgroundScheduler(daemon=True)
-# 时区是个大坑 淦 不要搞什么UTC UTC-8 老老实实用本地时间最简单
-sched.add_job(insert_feedback, 'cron', day_of_week='0-6', hour='14', minute='27', id='insert_feedback')
-sched.add_job(update_feedback, 'cron', day_of_week='0-6', hour='8,10,12,13,14,16,18,21,23', minute='24',
-              id='update_feedback')
-sched.start()
+def register_scheduler():
+    """
+    注册定时任务
+    """
+    sched = BackgroundScheduler(daemon=True)
+    # 时区是个大坑 淦 不要搞什么UTC UTC-8 老老实实用本地时间最简单
+    sched.add_job(insert_feedback, 'cron', day_of_week='0-6', hour='14', minute='27', id='insert_feedback')
+    sched.add_job(update_feedback, 'cron', day_of_week='0-6', hour='8,10,12,13,14,16,18,21,23', minute='24',
+                  id='update_feedback')
+    f = open("scheduler.lock", "wb")
+    # noinspection PyBroadException
+    try:
+        fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        sched.start()
+        logger.info("定时任务启动成功！")
+    except Exception as e:
+        logger.error("定时任务启动失败！")
+
+    def unlock():
+        fcntl.flock(f, fcntl.LOCK_UN)
+        f.close()
+
+    atexit.register(unlock)
+
+
+# sched = BackgroundScheduler(daemon=True)
+# # 时区是个大坑 淦 不要搞什么UTC UTC-8 老老实实用本地时间最简单
+# sched.add_job(insert_feedback, 'cron', day_of_week='0-6', hour='14', minute='27', id='insert_feedback')
+# sched.add_job(update_feedback, 'cron', day_of_week='0-6', hour='8,10,12,13,14,16,18,21,23', minute='24',
+#               id='update_feedback')
+# sched.start()
+register_scheduler()
+
 
 if __name__ == "__main__":
     app.run()

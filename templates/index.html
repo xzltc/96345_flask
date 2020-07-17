@@ -83,8 +83,8 @@
 
                                     $.ajax({
                                         type: "GET",
-                                        url: "http://127.0.0.1:5000/barChart/68",
-                                        {#url: "http://0.0.0.0:80/barChart/68",#}
+                                        {#url: "http://127.0.0.1:5000/barChart/68",#}
+                                        url: "http://175.24.42.115:80/barChart/68",
                                         dataType: 'json',
                                         success: function (result) {
                                             chart_item.setOption(result);
@@ -99,8 +99,8 @@
                                 var val = select.options[index].value;
                                 $.ajax({
                                     type: "GET",
-                                    url: "http://127.0.0.1:5000/barChart/" + val,
-                                    {#url: "http://0.0.0.0:80/barChart/" + val,#}
+                                    {#url: "http://127.0.0.1:5000/barChart/" + val,#}
+                                    url: "http://175.24.42.115:80/barChart/" + val,
                                     dataType: 'json',
                                     success: function (result) {
                                         chart_item.setOption(result, true);
@@ -139,8 +139,8 @@
                                             function () {
                                                 $.ajax({
                                                     type: "GET",
-                                                    url: "http://127.0.0.1:5000/increaseBarChart/68/1",
-                                                    {#url: "http://0.0.0.0:80/increaseBarChart/68/1",#}
+                                                    {#url: "http://127.0.0.1:5000/increaseBarChart/68/1",#}
+                                                    url: "http://175.24.42.115:80/increaseBarChart/68/1",
                                                     dataType: 'json',
                                                     success: function (result) {
                                                         chart.setOption(result);
@@ -159,8 +159,8 @@
                                             var item_id = item.options[item_index].value;
                                             $.ajax({
                                                 type: "GET",
-                                                url: "http://127.0.0.1:5000/increaseBarChart/" + item_id + "/" + val,
-                                                {#url: "http://0.0.0.0:80/increaseBarChart/" + item_id + "/" + val,#}
+                                                {#url: "http://127.0.0.1:5000/increaseBarChart/" + item_id + "/" + val,#}
+                                                url: "http://175.24.42.115:80/increaseBarChart/" + item_id + "/" + val,
                                                 dataType: 'json',
                                                 success: function (result) {
                                                     chart.setOption(result, true);
