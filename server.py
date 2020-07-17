@@ -140,13 +140,7 @@ def register_scheduler():
 
     atexit.register(unlock)
 
-
-# sched = BackgroundScheduler(daemon=True)
-# # 时区是个大坑 淦 不要搞什么UTC UTC-8 老老实实用本地时间最简单
-# sched.add_job(insert_feedback, 'cron', day_of_week='0-6', hour='14', minute='27', id='insert_feedback')
-# sched.add_job(update_feedback, 'cron', day_of_week='0-6', hour='8,10,12,13,14,16,18,21,23', minute='24',
-#               id='update_feedback')
-# sched.start()
+#注册定时任务
 register_scheduler()
 
 
