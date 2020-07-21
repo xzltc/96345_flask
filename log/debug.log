@@ -1,0 +1,1223 @@
+[2020-07-13 17:22:40 +0800] [91880] [DEBUG] Current configuration:
+  config: gunicorn.conf.py
+  bind: ['0.0.0.0:80']
+  backlog: 2048
+  workers: 5
+  worker_class: gevent
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/apple/PycharmProjects/96345_flask
+  daemon: False
+  raw_env: []
+  pidfile: log/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: log/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: log/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: server:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f9176255940>
+  on_reload: <function OnReload.on_reload at 0x7f9176255a60>
+  when_ready: <function WhenReady.when_ready at 0x7f9176255b80>
+  pre_fork: <function Prefork.pre_fork at 0x7f9176255ca0>
+  post_fork: <function Postfork.post_fork at 0x7f9176255dc0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f9176255ee0>
+  worker_int: <function WorkerInt.worker_int at 0x7f9176269040>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f9176269160>
+  pre_exec: <function PreExec.pre_exec at 0x7f9176269280>
+  pre_request: <function PreRequest.pre_request at 0x7f91762693a0>
+  post_request: <function PostRequest.post_request at 0x7f9176269430>
+  child_exit: <function ChildExit.child_exit at 0x7f9176269550>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f9176269670>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f9176269790>
+  on_exit: <function OnExit.on_exit at 0x7f91762698b0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2020-07-13 17:22:40 +0800] [91880] [INFO] Starting gunicorn 20.0.4
+[2020-07-13 17:22:40 +0800] [91880] [DEBUG] Arbiter booted
+[2020-07-13 17:22:40 +0800] [91880] [INFO] Listening at: http://0.0.0.0:80 (91880)
+[2020-07-13 17:22:40 +0800] [91880] [INFO] Using worker: gevent
+[2020-07-13 17:22:40 +0800] [91883] [INFO] Booting worker with pid: 91883
+[2020-07-13 17:22:40 +0800] [91884] [INFO] Booting worker with pid: 91884
+[2020-07-13 17:22:40 +0800] [91887] [INFO] Booting worker with pid: 91887
+[2020-07-13 17:22:40 +0800] [91888] [INFO] Booting worker with pid: 91888
+[2020-07-13 17:22:40 +0800] [91889] [INFO] Booting worker with pid: 91889
+[2020-07-13 17:22:40 +0800] [91880] [DEBUG] 5 workers
+[2020-07-13 17:23:19 +0800] [91889] [DEBUG] GET /
+[2020-07-13 17:23:21 +0800] [91889] [DEBUG] GET /barChart/68
+[2020-07-13 17:23:21 +0800] [91887] [DEBUG] GET /increaseBarChart/68/1
+[2020-07-13 17:23:26 +0800] [91884] [DEBUG] GET /increaseBarChart/68/4
+[2020-07-13 17:23:55 +0800] [91880] [INFO] Handling signal: int
+[2020-07-13 17:23:55 +0800] [91884] [INFO] Worker exiting (pid: 91884)
+[2020-07-13 17:23:55 +0800] [91887] [INFO] Worker exiting (pid: 91887)
+[2020-07-13 17:23:55 +0800] [91889] [INFO] Worker exiting (pid: 91889)
+[2020-07-13 17:23:55 +0800] [91883] [INFO] Worker exiting (pid: 91883)
+[2020-07-13 17:23:55 +0800] [91888] [INFO] Worker exiting (pid: 91888)
+[2020-07-13 17:23:55 +0800] [91880] [INFO] Shutting down: Master
+[2020-07-13 17:26:03 +0800] [91950] [DEBUG] Current configuration:
+  config: gunicorn.conf.py
+  bind: ['0.0.0.0:80']
+  backlog: 2048
+  workers: 5
+  worker_class: gevent
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/apple/PycharmProjects/96345_flask
+  daemon: False
+  raw_env: []
+  pidfile: log/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: log/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: log/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: server:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fb458a55940>
+  on_reload: <function OnReload.on_reload at 0x7fb458a55a60>
+  when_ready: <function WhenReady.when_ready at 0x7fb458a55b80>
+  pre_fork: <function Prefork.pre_fork at 0x7fb458a55ca0>
+  post_fork: <function Postfork.post_fork at 0x7fb458a55dc0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fb458a55ee0>
+  worker_int: <function WorkerInt.worker_int at 0x7fb458a68040>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fb458a68160>
+  pre_exec: <function PreExec.pre_exec at 0x7fb458a68280>
+  pre_request: <function PreRequest.pre_request at 0x7fb458a683a0>
+  post_request: <function PostRequest.post_request at 0x7fb458a68430>
+  child_exit: <function ChildExit.child_exit at 0x7fb458a68550>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fb458a68670>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fb458a68790>
+  on_exit: <function OnExit.on_exit at 0x7fb458a688b0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2020-07-13 17:26:03 +0800] [91950] [INFO] Starting gunicorn 20.0.4
+[2020-07-13 17:26:03 +0800] [91950] [DEBUG] Arbiter booted
+[2020-07-13 17:26:03 +0800] [91950] [INFO] Listening at: http://0.0.0.0:80 (91950)
+[2020-07-13 17:26:03 +0800] [91950] [INFO] Using worker: gevent
+[2020-07-13 17:26:03 +0800] [91952] [INFO] Booting worker with pid: 91952
+[2020-07-13 17:26:03 +0800] [91953] [INFO] Booting worker with pid: 91953
+[2020-07-13 17:26:03 +0800] [91954] [INFO] Booting worker with pid: 91954
+[2020-07-13 17:26:03 +0800] [91955] [INFO] Booting worker with pid: 91955
+[2020-07-13 17:26:03 +0800] [91956] [INFO] Booting worker with pid: 91956
+[2020-07-13 17:26:03 +0800] [91950] [DEBUG] 5 workers
+[2020-07-13 17:26:05 +0800] [91952] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/apple/PycharmProjects/96345_flask/server.py", line 6, in <module>
+    import check_update
+  File "/Users/apple/PycharmProjects/96345_flask/check_update.py", line 7, in <module>
+    import spider
+  File "/Users/apple/PycharmProjects/96345_flask/spider.py", line 8, in <module>
+    import db
+  File "/Users/apple/PycharmProjects/96345_flask/db.py", line 6, in <module>
+    log = tools.get_single_logger()  # 日志模块
+  File "/Users/apple/PycharmProjects/96345_flask/tools.py", line 119, in get_single_logger
+    log = C_logger('/log/sys.log', logging.DEBUG, logging.INFO).get_logger()
+  File "/Users/apple/PycharmProjects/96345_flask/logger.py", line 64, in get_logger
+    fh = logging.FileHandler(self.path, mode='a')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1143, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1172, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding)
+FileNotFoundError: [Errno 2] No such file or directory: '/log/sys.log'
+[2020-07-13 17:26:05 +0800] [91952] [INFO] Worker exiting (pid: 91952)
+[2020-07-13 17:26:05 +0800] [91953] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/apple/PycharmProjects/96345_flask/server.py", line 6, in <module>
+    import check_update
+  File "/Users/apple/PycharmProjects/96345_flask/check_update.py", line 7, in <module>
+    import spider
+  File "/Users/apple/PycharmProjects/96345_flask/spider.py", line 8, in <module>
+    import db
+  File "/Users/apple/PycharmProjects/96345_flask/db.py", line 6, in <module>
+    log = tools.get_single_logger()  # 日志模块
+  File "/Users/apple/PycharmProjects/96345_flask/tools.py", line 119, in get_single_logger
+    log = C_logger('/log/sys.log', logging.DEBUG, logging.INFO).get_logger()
+  File "/Users/apple/PycharmProjects/96345_flask/logger.py", line 64, in get_logger
+    fh = logging.FileHandler(self.path, mode='a')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1143, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1172, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding)
+FileNotFoundError: [Errno 2] No such file or directory: '/log/sys.log'
+[2020-07-13 17:26:05 +0800] [91953] [INFO] Worker exiting (pid: 91953)
+[2020-07-13 17:26:05 +0800] [91954] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/apple/PycharmProjects/96345_flask/server.py", line 6, in <module>
+    import check_update
+  File "/Users/apple/PycharmProjects/96345_flask/check_update.py", line 7, in <module>
+    import spider
+  File "/Users/apple/PycharmProjects/96345_flask/spider.py", line 8, in <module>
+    import db
+  File "/Users/apple/PycharmProjects/96345_flask/db.py", line 6, in <module>
+    log = tools.get_single_logger()  # 日志模块
+  File "/Users/apple/PycharmProjects/96345_flask/tools.py", line 119, in get_single_logger
+    log = C_logger('/log/sys.log', logging.DEBUG, logging.INFO).get_logger()
+  File "/Users/apple/PycharmProjects/96345_flask/logger.py", line 64, in get_logger
+    fh = logging.FileHandler(self.path, mode='a')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1143, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1172, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding)
+FileNotFoundError: [Errno 2] No such file or directory: '/log/sys.log'
+[2020-07-13 17:26:05 +0800] [91954] [INFO] Worker exiting (pid: 91954)
+[2020-07-13 17:26:05 +0800] [91955] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/apple/PycharmProjects/96345_flask/server.py", line 6, in <module>
+    import check_update
+  File "/Users/apple/PycharmProjects/96345_flask/check_update.py", line 7, in <module>
+    import spider
+  File "/Users/apple/PycharmProjects/96345_flask/spider.py", line 8, in <module>
+    import db
+  File "/Users/apple/PycharmProjects/96345_flask/db.py", line 6, in <module>
+    log = tools.get_single_logger()  # 日志模块
+  File "/Users/apple/PycharmProjects/96345_flask/tools.py", line 119, in get_single_logger
+    log = C_logger('/log/sys.log', logging.DEBUG, logging.INFO).get_logger()
+  File "/Users/apple/PycharmProjects/96345_flask/logger.py", line 64, in get_logger
+    fh = logging.FileHandler(self.path, mode='a')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1143, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1172, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding)
+FileNotFoundError: [Errno 2] No such file or directory: '/log/sys.log'
+[2020-07-13 17:26:05 +0800] [91955] [INFO] Worker exiting (pid: 91955)
+[2020-07-13 17:26:05 +0800] [91956] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/apple/PycharmProjects/96345_flask/server.py", line 6, in <module>
+    import check_update
+  File "/Users/apple/PycharmProjects/96345_flask/check_update.py", line 7, in <module>
+    import spider
+  File "/Users/apple/PycharmProjects/96345_flask/spider.py", line 8, in <module>
+    import db
+  File "/Users/apple/PycharmProjects/96345_flask/db.py", line 6, in <module>
+    log = tools.get_single_logger()  # 日志模块
+  File "/Users/apple/PycharmProjects/96345_flask/tools.py", line 119, in get_single_logger
+    log = C_logger('/log/sys.log', logging.DEBUG, logging.INFO).get_logger()
+  File "/Users/apple/PycharmProjects/96345_flask/logger.py", line 64, in get_logger
+    fh = logging.FileHandler(self.path, mode='a')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1143, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1172, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding)
+FileNotFoundError: [Errno 2] No such file or directory: '/log/sys.log'
+[2020-07-13 17:26:05 +0800] [91956] [INFO] Worker exiting (pid: 91956)
+[2020-07-13 17:26:05 +0800] [91950] [INFO] Shutting down: Master
+[2020-07-13 17:26:05 +0800] [91950] [INFO] Reason: Worker failed to boot.
+[2020-07-13 17:26:21 +0800] [91962] [DEBUG] Current configuration:
+  config: gunicorn.conf.py
+  bind: ['0.0.0.0:80']
+  backlog: 2048
+  workers: 5
+  worker_class: gevent
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/apple/PycharmProjects/96345_flask
+  daemon: False
+  raw_env: []
+  pidfile: log/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: log/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: log/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: server:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fe433a1d940>
+  on_reload: <function OnReload.on_reload at 0x7fe433a1da60>
+  when_ready: <function WhenReady.when_ready at 0x7fe433a1db80>
+  pre_fork: <function Prefork.pre_fork at 0x7fe433a1dca0>
+  post_fork: <function Postfork.post_fork at 0x7fe433a1ddc0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fe433a1dee0>
+  worker_int: <function WorkerInt.worker_int at 0x7fe433a30040>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fe433a30160>
+  pre_exec: <function PreExec.pre_exec at 0x7fe433a30280>
+  pre_request: <function PreRequest.pre_request at 0x7fe433a303a0>
+  post_request: <function PostRequest.post_request at 0x7fe433a30430>
+  child_exit: <function ChildExit.child_exit at 0x7fe433a30550>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fe433a30670>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fe433a30790>
+  on_exit: <function OnExit.on_exit at 0x7fe433a308b0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2020-07-13 17:26:21 +0800] [91962] [INFO] Starting gunicorn 20.0.4
+[2020-07-13 17:26:21 +0800] [91962] [DEBUG] Arbiter booted
+[2020-07-13 17:26:21 +0800] [91962] [INFO] Listening at: http://0.0.0.0:80 (91962)
+[2020-07-13 17:26:21 +0800] [91962] [INFO] Using worker: gevent
+[2020-07-13 17:26:21 +0800] [91965] [INFO] Booting worker with pid: 91965
+[2020-07-13 17:26:21 +0800] [91966] [INFO] Booting worker with pid: 91966
+[2020-07-13 17:26:21 +0800] [91967] [INFO] Booting worker with pid: 91967
+[2020-07-13 17:26:21 +0800] [91968] [INFO] Booting worker with pid: 91968
+[2020-07-13 17:26:21 +0800] [91969] [INFO] Booting worker with pid: 91969
+[2020-07-13 17:26:21 +0800] [91962] [DEBUG] 5 workers
+[2020-07-13 17:26:22 +0800] [91965] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/apple/PycharmProjects/96345_flask/server.py", line 6, in <module>
+    import check_update
+  File "/Users/apple/PycharmProjects/96345_flask/check_update.py", line 7, in <module>
+    import spider
+  File "/Users/apple/PycharmProjects/96345_flask/spider.py", line 8, in <module>
+    import db
+  File "/Users/apple/PycharmProjects/96345_flask/db.py", line 6, in <module>
+    log = tools.get_single_logger()  # 日志模块
+  File "/Users/apple/PycharmProjects/96345_flask/tools.py", line 119, in get_single_logger
+    log = C_logger('/log/sys.log', logging.DEBUG, logging.INFO).get_logger()
+  File "/Users/apple/PycharmProjects/96345_flask/logger.py", line 64, in get_logger
+    fh = logging.FileHandler(self.path, mode='a')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1143, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1172, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding)
+FileNotFoundError: [Errno 2] No such file or directory: '/log/sys.log'
+[2020-07-13 17:26:22 +0800] [91965] [INFO] Worker exiting (pid: 91965)
+[2020-07-13 17:26:22 +0800] [91966] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/apple/PycharmProjects/96345_flask/server.py", line 6, in <module>
+    import check_update
+  File "/Users/apple/PycharmProjects/96345_flask/check_update.py", line 7, in <module>
+    import spider
+  File "/Users/apple/PycharmProjects/96345_flask/spider.py", line 8, in <module>
+    import db
+  File "/Users/apple/PycharmProjects/96345_flask/db.py", line 6, in <module>
+    log = tools.get_single_logger()  # 日志模块
+  File "/Users/apple/PycharmProjects/96345_flask/tools.py", line 119, in get_single_logger
+    log = C_logger('/log/sys.log', logging.DEBUG, logging.INFO).get_logger()
+  File "/Users/apple/PycharmProjects/96345_flask/logger.py", line 64, in get_logger
+    fh = logging.FileHandler(self.path, mode='a')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1143, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1172, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding)
+FileNotFoundError: [Errno 2] No such file or directory: '/log/sys.log'
+[2020-07-13 17:26:22 +0800] [91966] [INFO] Worker exiting (pid: 91966)
+[2020-07-13 17:26:22 +0800] [91967] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/apple/PycharmProjects/96345_flask/server.py", line 6, in <module>
+    import check_update
+  File "/Users/apple/PycharmProjects/96345_flask/check_update.py", line 7, in <module>
+    import spider
+  File "/Users/apple/PycharmProjects/96345_flask/spider.py", line 8, in <module>
+    import db
+  File "/Users/apple/PycharmProjects/96345_flask/db.py", line 6, in <module>
+    log = tools.get_single_logger()  # 日志模块
+  File "/Users/apple/PycharmProjects/96345_flask/tools.py", line 119, in get_single_logger
+    log = C_logger('/log/sys.log', logging.DEBUG, logging.INFO).get_logger()
+  File "/Users/apple/PycharmProjects/96345_flask/logger.py", line 64, in get_logger
+    fh = logging.FileHandler(self.path, mode='a')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1143, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1172, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding)
+FileNotFoundError: [Errno 2] No such file or directory: '/log/sys.log'
+[2020-07-13 17:26:22 +0800] [91967] [INFO] Worker exiting (pid: 91967)
+[2020-07-13 17:26:22 +0800] [91968] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/apple/PycharmProjects/96345_flask/server.py", line 6, in <module>
+    import check_update
+  File "/Users/apple/PycharmProjects/96345_flask/check_update.py", line 7, in <module>
+    import spider
+  File "/Users/apple/PycharmProjects/96345_flask/spider.py", line 8, in <module>
+    import db
+  File "/Users/apple/PycharmProjects/96345_flask/db.py", line 6, in <module>
+    log = tools.get_single_logger()  # 日志模块
+  File "/Users/apple/PycharmProjects/96345_flask/tools.py", line 119, in get_single_logger
+    log = C_logger('/log/sys.log', logging.DEBUG, logging.INFO).get_logger()
+  File "/Users/apple/PycharmProjects/96345_flask/logger.py", line 64, in get_logger
+    fh = logging.FileHandler(self.path, mode='a')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1143, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1172, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding)
+FileNotFoundError: [Errno 2] No such file or directory: '/log/sys.log'
+[2020-07-13 17:26:22 +0800] [91968] [INFO] Worker exiting (pid: 91968)
+[2020-07-13 17:26:22 +0800] [91969] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/apple/PycharmProjects/96345_flask/venv/lib/python3.8/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/apple/PycharmProjects/96345_flask/server.py", line 6, in <module>
+    import check_update
+  File "/Users/apple/PycharmProjects/96345_flask/check_update.py", line 7, in <module>
+    import spider
+  File "/Users/apple/PycharmProjects/96345_flask/spider.py", line 8, in <module>
+    import db
+  File "/Users/apple/PycharmProjects/96345_flask/db.py", line 6, in <module>
+    log = tools.get_single_logger()  # 日志模块
+  File "/Users/apple/PycharmProjects/96345_flask/tools.py", line 119, in get_single_logger
+    log = C_logger('/log/sys.log', logging.DEBUG, logging.INFO).get_logger()
+  File "/Users/apple/PycharmProjects/96345_flask/logger.py", line 64, in get_logger
+    fh = logging.FileHandler(self.path, mode='a')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1143, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1172, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding)
+FileNotFoundError: [Errno 2] No such file or directory: '/log/sys.log'
+[2020-07-13 17:26:22 +0800] [91969] [INFO] Worker exiting (pid: 91969)
+[2020-07-13 18:15:55 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:91529)
+[2020-07-13 18:15:55 +0800] [91529] [INFO] Worker exiting (pid: 91529)
+[2020-07-13 18:15:55 +0800] [92131] [INFO] Booting worker with pid: 92131
+[2020-07-13 19:10:04 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:91530)
+[2020-07-13 19:10:05 +0800] [91530] [INFO] Worker exiting (pid: 91530)
+[2020-07-13 19:10:05 +0800] [92160] [INFO] Booting worker with pid: 92160
+[2020-07-13 19:14:59 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:91531)
+[2020-07-13 19:14:59 +0800] [91531] [INFO] Worker exiting (pid: 91531)
+[2020-07-13 19:14:59 +0800] [92167] [INFO] Booting worker with pid: 92167
+[2020-07-13 20:14:42 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:91532)
+[2020-07-13 20:14:42 +0800] [91532] [INFO] Worker exiting (pid: 91532)
+[2020-07-13 20:14:43 +0800] [92219] [INFO] Booting worker with pid: 92219
+[2020-07-13 20:19:58 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92131)
+[2020-07-13 20:19:58 +0800] [92131] [INFO] Worker exiting (pid: 92131)
+[2020-07-13 20:19:59 +0800] [92283] [INFO] Booting worker with pid: 92283
+[2020-07-13 20:22:07 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92160)
+[2020-07-13 20:22:07 +0800] [92160] [INFO] Worker exiting (pid: 92160)
+[2020-07-13 20:22:07 +0800] [92332] [INFO] Booting worker with pid: 92332
+[2020-07-13 20:55:38 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92167)
+[2020-07-13 20:55:38 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92219)
+[2020-07-13 20:55:38 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92283)
+[2020-07-13 20:55:38 +0800] [92167] [INFO] Worker exiting (pid: 92167)
+[2020-07-13 20:55:38 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92332)
+[2020-07-13 20:55:38 +0800] [92219] [INFO] Worker exiting (pid: 92219)
+[2020-07-13 20:55:38 +0800] [92283] [INFO] Worker exiting (pid: 92283)
+[2020-07-13 20:55:38 +0800] [92332] [INFO] Worker exiting (pid: 92332)
+[2020-07-13 20:55:38 +0800] [92359] [INFO] Booting worker with pid: 92359
+[2020-07-13 20:55:38 +0800] [91528] [DEBUG] 1 workers
+[2020-07-13 20:55:38 +0800] [92360] [INFO] Booting worker with pid: 92360
+[2020-07-13 20:55:38 +0800] [92361] [INFO] Booting worker with pid: 92361
+[2020-07-13 20:55:38 +0800] [92362] [INFO] Booting worker with pid: 92362
+[2020-07-13 20:55:38 +0800] [91528] [DEBUG] 4 workers
+[2020-07-13 21:15:06 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92359)
+[2020-07-13 21:15:06 +0800] [92359] [INFO] Worker exiting (pid: 92359)
+[2020-07-13 21:15:06 +0800] [92377] [INFO] Booting worker with pid: 92377
+[2020-07-13 22:15:09 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92360)
+[2020-07-13 22:15:09 +0800] [92360] [INFO] Worker exiting (pid: 92360)
+[2020-07-13 22:15:09 +0800] [92401] [INFO] Booting worker with pid: 92401
+[2020-07-13 23:45:04 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92361)
+[2020-07-13 23:45:05 +0800] [92361] [INFO] Worker exiting (pid: 92361)
+[2020-07-13 23:45:05 +0800] [92450] [INFO] Booting worker with pid: 92450
+[2020-07-14 00:51:50 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92362)
+[2020-07-14 00:51:50 +0800] [92362] [INFO] Worker exiting (pid: 92362)
+[2020-07-14 00:51:50 +0800] [92711] [INFO] Booting worker with pid: 92711
+[2020-07-14 02:51:14 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92377)
+[2020-07-14 02:51:14 +0800] [92377] [INFO] Worker exiting (pid: 92377)
+[2020-07-14 02:51:14 +0800] [92754] [INFO] Booting worker with pid: 92754
+[2020-07-14 04:52:04 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92401)
+[2020-07-14 04:52:04 +0800] [92401] [INFO] Worker exiting (pid: 92401)
+[2020-07-14 04:52:04 +0800] [92771] [INFO] Booting worker with pid: 92771
+[2020-07-14 06:52:54 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92450)
+[2020-07-14 06:52:54 +0800] [92450] [INFO] Worker exiting (pid: 92450)
+[2020-07-14 06:52:54 +0800] [92829] [INFO] Booting worker with pid: 92829
+[2020-07-14 08:16:00 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92711)
+[2020-07-14 08:16:00 +0800] [92711] [INFO] Worker exiting (pid: 92711)
+[2020-07-14 08:16:00 +0800] [92848] [INFO] Booting worker with pid: 92848
+[2020-07-14 09:04:51 +0800] [91528] [CRITICAL] WORKER TIMEOUT (pid:92771)
+[2020-07-14 09:04:52 +0800] [92771] [INFO] Worker exiting (pid: 92771)
+[2020-07-14 09:04:52 +0800] [92873] [INFO] Booting worker with pid: 92873
+[2020-07-14 09:08:04 +0800] [92873] [DEBUG] GET /
+[2020-07-14 09:08:05 +0800] [92873] [DEBUG] GET /static/assets/css/style.css
+[2020-07-14 09:08:05 +0800] [92873] [DEBUG] GET /static/assets/js/main.min.js
+[2020-07-14 09:08:07 +0800] [92848] [DEBUG] GET /barChart/68
+[2020-07-14 09:08:07 +0800] [92873] [DEBUG] GET /increaseBarChart/68/1
+[2020-07-14 09:22:29 +0800] [91528] [INFO] Handling signal: term
+[2020-07-14 09:22:30 +0800] [92873] [INFO] Worker exiting (pid: 92873)
+[2020-07-14 09:22:30 +0800] [92848] [INFO] Worker exiting (pid: 92848)
+[2020-07-14 09:22:30 +0800] [92754] [INFO] Worker exiting (pid: 92754)
+[2020-07-14 09:22:30 +0800] [92829] [INFO] Worker exiting (pid: 92829)
+[2020-07-14 09:22:30 +0800] [91528] [INFO] Shutting down: Master
+[2020-07-14 09:38:24 +0800] [93291] [DEBUG] Current configuration:
+  config: gunicorn.conf.py
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 5
+  worker_class: gevent
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/apple/PycharmProjects/96345_flask
+  daemon: False
+  raw_env: []
+  pidfile: log/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: log/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: log/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: server:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fc54ca55940>
+  on_reload: <function OnReload.on_reload at 0x7fc54ca55a60>
+  when_ready: <function WhenReady.when_ready at 0x7fc54ca55b80>
+  pre_fork: <function Prefork.pre_fork at 0x7fc54ca55ca0>
+  post_fork: <function Postfork.post_fork at 0x7fc54ca55dc0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fc54ca55ee0>
+  worker_int: <function WorkerInt.worker_int at 0x7fc54ca67040>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fc54ca67160>
+  pre_exec: <function PreExec.pre_exec at 0x7fc54ca67280>
+  pre_request: <function PreRequest.pre_request at 0x7fc54ca673a0>
+  post_request: <function PostRequest.post_request at 0x7fc54ca67430>
+  child_exit: <function ChildExit.child_exit at 0x7fc54ca67550>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fc54ca67670>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fc54ca67790>
+  on_exit: <function OnExit.on_exit at 0x7fc54ca678b0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2020-07-14 09:38:24 +0800] [93291] [INFO] Starting gunicorn 20.0.4
+[2020-07-14 09:38:24 +0800] [93291] [DEBUG] Arbiter booted
+[2020-07-14 09:38:24 +0800] [93291] [INFO] Listening at: http://0.0.0.0:8000 (93291)
+[2020-07-14 09:38:24 +0800] [93291] [INFO] Using worker: gevent
+[2020-07-14 09:38:24 +0800] [93293] [INFO] Booting worker with pid: 93293
+[2020-07-14 09:38:24 +0800] [93294] [INFO] Booting worker with pid: 93294
+[2020-07-14 09:38:24 +0800] [93295] [INFO] Booting worker with pid: 93295
+[2020-07-14 09:38:25 +0800] [93298] [INFO] Booting worker with pid: 93298
+[2020-07-14 09:38:25 +0800] [93299] [INFO] Booting worker with pid: 93299
+[2020-07-14 09:38:25 +0800] [93291] [DEBUG] 5 workers
+[2020-07-14 09:39:18 +0800] [93299] [DEBUG] GET /
+[2020-07-14 09:39:18 +0800] [93299] [DEBUG] GET /static/assets/css/style.css
+[2020-07-14 09:39:18 +0800] [93299] [DEBUG] GET /static/assets/js/main.min.js
+[2020-07-14 09:39:19 +0800] [93299] [DEBUG] GET /barChart/68
+[2020-07-14 09:39:19 +0800] [93299] [DEBUG] GET /favicon.ico
+[2020-07-14 09:39:20 +0800] [93299] [DEBUG] GET /increaseBarChart/68/1
+[2020-07-14 09:39:35 +0800] [93299] [DEBUG] GET /increaseBarChart/68/2
+[2020-07-14 09:39:59 +0800] [93298] [DEBUG] GET /increaseBarChart/1/2
+[2020-07-14 09:40:03 +0800] [93291] [INFO] Handling signal: int
+[2020-07-14 09:40:03 +0800] [93298] [INFO] Worker exiting (pid: 93298)
+[2020-07-14 09:40:03 +0800] [93294] [INFO] Worker exiting (pid: 93294)
+[2020-07-14 09:40:03 +0800] [93299] [INFO] Worker exiting (pid: 93299)
+[2020-07-14 09:40:03 +0800] [93293] [INFO] Worker exiting (pid: 93293)
+[2020-07-14 09:40:03 +0800] [93295] [INFO] Worker exiting (pid: 93295)
+[2020-07-14 09:40:03 +0800] [93291] [INFO] Shutting down: Master
+[2020-07-14 09:42:19 +0800] [93348] [DEBUG] Current configuration:
+  config: gunicorn.conf.py
+  bind: ['0.0.0.0:80']
+  backlog: 2048
+  workers: 5
+  worker_class: gevent
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/apple/PycharmProjects/96345_flask
+  daemon: False
+  raw_env: []
+  pidfile: log/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: log/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: log/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: server:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f9e4ca55940>
+  on_reload: <function OnReload.on_reload at 0x7f9e4ca55a60>
+  when_ready: <function WhenReady.when_ready at 0x7f9e4ca55b80>
+  pre_fork: <function Prefork.pre_fork at 0x7f9e4ca55ca0>
+  post_fork: <function Postfork.post_fork at 0x7f9e4ca55dc0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f9e4ca55ee0>
+  worker_int: <function WorkerInt.worker_int at 0x7f9e4ca68040>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f9e4ca68160>
+  pre_exec: <function PreExec.pre_exec at 0x7f9e4ca68280>
+  pre_request: <function PreRequest.pre_request at 0x7f9e4ca683a0>
+  post_request: <function PostRequest.post_request at 0x7f9e4ca68430>
+  child_exit: <function ChildExit.child_exit at 0x7f9e4ca68550>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f9e4ca68670>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f9e4ca68790>
+  on_exit: <function OnExit.on_exit at 0x7f9e4ca688b0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2020-07-14 09:42:19 +0800] [93348] [INFO] Starting gunicorn 20.0.4
+[2020-07-14 09:42:19 +0800] [93348] [DEBUG] Arbiter booted
+[2020-07-14 09:42:19 +0800] [93348] [INFO] Listening at: http://0.0.0.0:80 (93348)
+[2020-07-14 09:42:19 +0800] [93348] [INFO] Using worker: gevent
+[2020-07-14 09:42:19 +0800] [93350] [INFO] Booting worker with pid: 93350
+[2020-07-14 09:42:19 +0800] [93351] [INFO] Booting worker with pid: 93351
+[2020-07-14 09:42:19 +0800] [93352] [INFO] Booting worker with pid: 93352
+[2020-07-14 09:42:19 +0800] [93353] [INFO] Booting worker with pid: 93353
+[2020-07-14 09:42:19 +0800] [93356] [INFO] Booting worker with pid: 93356
+[2020-07-14 09:42:19 +0800] [93348] [DEBUG] 5 workers
+[2020-07-14 09:42:35 +0800] [93353] [DEBUG] GET /
+[2020-07-14 09:42:35 +0800] [93353] [DEBUG] GET /static/assets/css/style.css
+[2020-07-14 09:42:35 +0800] [93353] [DEBUG] GET /static/assets/js/main.min.js
+[2020-07-14 09:42:36 +0800] [93353] [DEBUG] GET /barChart/68
+[2020-07-14 09:42:36 +0800] [93356] [DEBUG] GET /increaseBarChart/68/1
+[2020-07-14 09:42:41 +0800] [93356] [DEBUG] GET /barChart/3
+[2020-07-14 09:42:41 +0800] [93350] [DEBUG] GET /increaseBarChart/3/1
+[2020-07-14 09:42:43 +0800] [93350] [DEBUG] GET /barChart/1
+[2020-07-14 09:42:43 +0800] [93356] [DEBUG] GET /increaseBarChart/1/1
+[2020-07-14 09:42:44 +0800] [93356] [DEBUG] GET /barChart/68
+[2020-07-14 09:42:44 +0800] [93350] [DEBUG] GET /increaseBarChart/68/1
+[2020-07-14 09:42:47 +0800] [93353] [DEBUG] GET /barChart/65
+[2020-07-14 09:42:47 +0800] [93351] [DEBUG] GET /increaseBarChart/65/1
+[2020-07-14 09:42:54 +0800] [93351] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 09:42:54 +0800] [93353] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 09:42:54 +0800] [93348] [INFO] Handling signal: winch
+[2020-07-14 09:42:54 +0800] [93356] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 09:42:54 +0800] [93348] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 09:42:54 +0800] [93352] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 09:42:54 +0800] [93350] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 09:42:54 +0800] [93348] [INFO] Handling signal: winch
+[2020-07-14 09:42:54 +0800] [93353] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 09:42:54 +0800] [93356] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 09:42:54 +0800] [93348] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 09:42:54 +0800] [93352] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 09:42:54 +0800] [93351] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 09:42:54 +0800] [93350] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:21 +0800] [97238] [DEBUG] Current configuration:
+  config: gunicorn.conf.py
+  bind: ['0.0.0.0:80']
+  backlog: 2048
+  workers: 5
+  worker_class: gevent
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/apple/PycharmProjects/96345_flask
+  daemon: False
+  raw_env: []
+  pidfile: log/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: log/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: log/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: server:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fb761255940>
+  on_reload: <function OnReload.on_reload at 0x7fb761255a60>
+  when_ready: <function WhenReady.when_ready at 0x7fb761255b80>
+  pre_fork: <function Prefork.pre_fork at 0x7fb761255ca0>
+  post_fork: <function Postfork.post_fork at 0x7fb761255dc0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fb761255ee0>
+  worker_int: <function WorkerInt.worker_int at 0x7fb761268040>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fb761268160>
+  pre_exec: <function PreExec.pre_exec at 0x7fb761268280>
+  pre_request: <function PreRequest.pre_request at 0x7fb7612683a0>
+  post_request: <function PostRequest.post_request at 0x7fb761268430>
+  child_exit: <function ChildExit.child_exit at 0x7fb761268550>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fb761268670>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fb761268790>
+  on_exit: <function OnExit.on_exit at 0x7fb7612688b0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2020-07-14 20:19:21 +0800] [97238] [INFO] Starting gunicorn 20.0.4
+[2020-07-14 20:19:21 +0800] [97238] [DEBUG] Arbiter booted
+[2020-07-14 20:19:21 +0800] [97238] [INFO] Listening at: http://0.0.0.0:80 (97238)
+[2020-07-14 20:19:21 +0800] [97238] [INFO] Using worker: gevent
+[2020-07-14 20:19:21 +0800] [97240] [INFO] Booting worker with pid: 97240
+[2020-07-14 20:19:21 +0800] [97241] [INFO] Booting worker with pid: 97241
+[2020-07-14 20:19:21 +0800] [97242] [INFO] Booting worker with pid: 97242
+[2020-07-14 20:19:21 +0800] [97245] [INFO] Booting worker with pid: 97245
+[2020-07-14 20:19:21 +0800] [97246] [INFO] Booting worker with pid: 97246
+[2020-07-14 20:19:21 +0800] [97238] [DEBUG] 5 workers
+[2020-07-14 20:19:25 +0800] [97238] [INFO] Handling signal: winch
+[2020-07-14 20:19:25 +0800] [97238] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 20:19:25 +0800] [97238] [INFO] Handling signal: winch
+[2020-07-14 20:19:25 +0800] [97238] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 20:19:25 +0800] [97241] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:25 +0800] [97240] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:25 +0800] [97242] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:25 +0800] [97245] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:26 +0800] [97246] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:43 +0800] [97246] [DEBUG] GET /
+[2020-07-14 20:19:49 +0800] [97245] [DEBUG] GET /increaseBarChart/68/1
+[2020-07-14 20:19:49 +0800] [97246] [DEBUG] GET /barChart/68
+[2020-07-14 20:19:59 +0800] [97245] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97238] [INFO] Handling signal: winch
+[2020-07-14 20:19:59 +0800] [97242] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97238] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 20:19:59 +0800] [97241] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97240] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97246] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97245] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97238] [INFO] Handling signal: winch
+[2020-07-14 20:19:59 +0800] [97238] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 20:19:59 +0800] [97241] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97246] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97242] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97240] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97238] [INFO] Handling signal: winch
+[2020-07-14 20:19:59 +0800] [97238] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 20:19:59 +0800] [97245] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97241] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97242] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97240] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97246] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97238] [INFO] Handling signal: winch
+[2020-07-14 20:19:59 +0800] [97238] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 20:19:59 +0800] [97242] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97246] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97245] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97241] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 20:19:59 +0800] [97240] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:02:58 +0800] [97245] [DEBUG] GET /
+[2020-07-14 21:02:59 +0800] [97245] [DEBUG] GET /increaseBarChart/68/1
+[2020-07-14 21:03:00 +0800] [97245] [DEBUG] GET /barChart/68
+[2020-07-14 21:03:30 +0800] [97242] [DEBUG] GET /barChart/1
+[2020-07-14 21:03:30 +0800] [97245] [DEBUG] GET /increaseBarChart/1/1
+[2020-07-14 21:04:05 +0800] [97238] [INFO] Handling signal: winch
+[2020-07-14 21:04:05 +0800] [97245] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:05 +0800] [97238] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 21:04:05 +0800] [97240] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:05 +0800] [97242] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:05 +0800] [97246] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:05 +0800] [97241] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:06 +0800] [97238] [INFO] Handling signal: winch
+[2020-07-14 21:04:06 +0800] [97238] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 21:04:06 +0800] [97242] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:06 +0800] [97245] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:06 +0800] [97246] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:06 +0800] [97240] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:06 +0800] [97241] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:06 +0800] [97238] [INFO] Handling signal: winch
+[2020-07-14 21:04:06 +0800] [97238] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 21:04:06 +0800] [97245] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:06 +0800] [97242] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:06 +0800] [97241] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:06 +0800] [97240] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:06 +0800] [97246] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:20 +0800] [97246] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:20 +0800] [97245] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:20 +0800] [97238] [INFO] Handling signal: winch
+[2020-07-14 21:04:20 +0800] [97238] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 21:04:20 +0800] [97242] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:20 +0800] [97241] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:20 +0800] [97240] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:20 +0800] [97245] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:20 +0800] [97246] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:20 +0800] [97238] [INFO] Handling signal: winch
+[2020-07-14 21:04:20 +0800] [97238] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 21:04:20 +0800] [97242] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:20 +0800] [97240] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:20 +0800] [97241] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:28 +0800] [97246] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:28 +0800] [97238] [INFO] Handling signal: winch
+[2020-07-14 21:04:28 +0800] [97238] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 21:04:28 +0800] [97242] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:28 +0800] [97240] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:28 +0800] [97241] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:28 +0800] [97245] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:28 +0800] [97246] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:28 +0800] [97242] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:28 +0800] [97245] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:28 +0800] [97238] [INFO] Handling signal: winch
+[2020-07-14 21:04:28 +0800] [97238] [DEBUG] SIGWINCH ignored. Not daemonized
+[2020-07-14 21:04:28 +0800] [97241] [DEBUG] worker: SIGWINCH ignored.
+[2020-07-14 21:04:28 +0800] [97240] [DEBUG] worker: SIGWINCH ignored.

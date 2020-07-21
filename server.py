@@ -6,6 +6,7 @@ from pyecharts.charts import Bar
 import check_update
 import atexit
 import fcntl
+import json
 import tools
 import db
 
@@ -27,6 +28,16 @@ def index():
     return render_template("index.html")
 
 
+@app.route('/serve/updateTime')
+def get_update_time():
+    session = db.get_db_session(db_path)
+    res = db.query_all_item(session)
+    time = res[7].updateTime
+    ret_time = str(time.month) + '-' + str(time.day) + ' ' + str(time.hour) + ':' + str(time.minute)
+    dict1 = {'updateTime': ret_time}
+    return json.dumps(dict1)
+
+
 # ajax获取类目主表路由
 @app.route("/barChart/<int:item_id>")
 def get_bar_chart(item_id):
@@ -43,7 +54,7 @@ def item_bar(item_id) -> Bar:
     # session = Session()
     session = db.get_db_session(db_path)
     # 取得所有当前类目数据库数据 元祖类型 降序
-    result = db.query_date_feedback_info(session, item_id, tools.get_assign_year_date(2))
+    result = db.query_date_feedback_info(session, item_id, tools.get_today())
     res = tools.change_2_pyechart_format(result)
 
     t = (
@@ -122,8 +133,8 @@ def register_scheduler():
     """
     sched = BackgroundScheduler(daemon=True)
     # 时区是个大坑 淦 不要搞什么UTC UTC-8 老老实实用本地时间最简单
-    sched.add_job(insert_feedback, 'cron', day_of_week='0-6', hour='14', minute='27', id='insert_feedback')
-    sched.add_job(update_feedback, 'cron', day_of_week='0-6', hour='8,10,12,13,14,16,18,21,23', minute='24',
+    sched.add_job(insert_feedback, 'cron', day_of_week='0-6', hour='0', minute='30', id='insert_feedback')
+    sched.add_job(update_feedback, 'cron', day_of_week='0-6', hour='8,10,13,14,16,18,21,23', minute='24',
                   id='update_feedback')
     f = open("scheduler.lock", "wb")
     # noinspection PyBroadException
@@ -140,9 +151,9 @@ def register_scheduler():
 
     atexit.register(unlock)
 
-#注册定时任务
-register_scheduler()
 
+# 注册定时任务
+register_scheduler()
 
 if __name__ == "__main__":
     app.run()

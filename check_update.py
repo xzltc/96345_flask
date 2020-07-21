@@ -9,6 +9,8 @@ import spider
 import tools
 import db
 
+log = tools.get_single_logger()  # 日志模块
+
 
 def main():
     db_path = 'sqlite:///96345.db?check_same_thread=False'
@@ -18,8 +20,8 @@ def main():
 
     session = db.get_db_session(db_path, True)
     # 查询所有服务类目
-    every_day_update_feedback(param, base_url, header, session, 0)
-    # every_day_update_feedback(param, base_url, header, session, 1)
+    # every_day_update_feedback(param, base_url, header, session, 0)
+    every_day_update_feedback(param, base_url, header, session, 1)
     # all_merchant_info = spider.get_all_pages_service_info(base_url, header, param, '5')
     # all_merchant_info_detail = spider.get_personal_service_data(all_merchant_info)
     # check_merchants(session, 5, all_merchant_info)
@@ -42,6 +44,8 @@ def every_day_update_feedback(param, base_url, header, session, flag):
             db.insert_feedback(session, all_merchant_info_detail)
         elif flag == 1:
             db.update_feedback(session, all_merchant_info_detail, tools.get_today())
+        # 插入最近更新时间
+        db.update_updateTime(session, item_id)
 
 
 # 判断一个服务类目中的商家是否发生改变 并修改数据库信息
@@ -85,14 +89,14 @@ def check_merchants(session, item_id, current_all_info, item_merchant_amount):
             for i in range(len(current_all_info)):
                 if increase[t] == current_all_info[i].get('id'):
                     db.insert_merchant(session, current_all_info[i])
-                    print("新增商家->", current_all_info[i])
+                    log.warning("新增商家->", current_all_info[i])
                     break
 
     if decrease_mount > 0:
         for k in range(decrease_mount):
             for i in previous_merchants:
                 if i.merchantId == decrease[k]:
-                    print("删除商家->", i)
+                    log.warning("删除商家->", i)
                     # 删除商家
                     db.del_merchant(session, i)
                     # 删除该商家对于的所有反馈信息

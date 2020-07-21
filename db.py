@@ -1,3 +1,5 @@
+import time
+
 from sqlalchemy import create_engine, exc
 from sqlalchemy.orm import sessionmaker
 from entity import Item, Feedback, Merchant
@@ -71,7 +73,7 @@ def insert_feedback(session, all_info):
             feedback = Feedback(merchantId=i['id'], itemId=i['item'], satisfaction=i['satisfaction'],
                                 praise=i['praise'],
                                 criticism=i['criticism'], amount=i['amount'])
-            print(feedback.__repr__())
+            log.debug(feedback.__repr__())
             feedback_list.append(feedback)
         session.add_all(feedback_list)
         session.commit()
@@ -121,7 +123,7 @@ def query_merchant_info(session, item_id):
     # 获得当前类目下的所有商户
     try:
         results = session.query(Merchant).filter(Merchant.itemId == item_id).all()
-        print("查询结果数：", len(results))
+        log.info("查询结果数：", len(results))
         for r in results:
             log.debug(r)
         log.info("查询merchant成功！！")
@@ -170,3 +172,16 @@ def delete_merchant_feedback(session, merchant_info):
         log.warning("删除商户相关的所有feedback信息 ID:%d" % merchant_info.merchantId)
     except exc.SQLAlchemyError as e:
         log.error("删除商户相关的所有feedback信息失败！！ ID:%d" % merchant_info.merchantId)
+        log.error(e)
+
+
+# 记录类目最近更新时间
+def update_updateTime(session, item_id):
+    try:
+        Time = tools.get_now()
+        session.query(Item).filter(Item.id == item_id).update({'updateTime': Time})
+        session.commit()
+        log.info("item:%d 最近更新:%s 成功！!" % (item_id, str(time)))
+    except exc.SQLAlchemyError as e:
+        log.error("item:%d 最近更新:%s失败！" % (item_id, str(time)))
+        log.error(e)

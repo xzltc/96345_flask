@@ -42,11 +42,26 @@
                 <!-- 左侧功能栏 -->
                 <ul class="header-links list-reset m-0">
                     <li>
-                        <a href="#">入口一</a>
+                        <a id="updateTime" href="#"> </a>
                     </li>
                     <li>
                         <a class="button button-sm button-shadow" href="#">入口二</a>
                     </li>
+                    <script>
+                        $(function () {
+                            $.ajax({
+                                type:'GET',
+                                url: "http://175.24.42.115:80/serve/updateTime",
+                                {#url: "http://127.0.0.1:5000/serve/updateTime",#}
+                                dataType:'json',
+                                success:function(data){
+                                    var elem = document.getElementById('updateTime');
+                                    elem.innerHTML = data['updateTime'];
+                                    console.log(data['updateTime']);
+                                }
+                            })
+                        })
+                    </script>
                 </ul>
             </div>
         </div>
@@ -77,10 +92,9 @@
                         <script>
                             var chart_item = echarts.init(document.getElementById('bar'), {
                                 renderer: 'svg'
-                            });
+                            })
                             $(
                                 function () {
-
                                     $.ajax({
                                         type: "GET",
                                         {#url: "http://127.0.0.1:5000/barChart/68",#}
@@ -106,7 +120,6 @@
                                         chart_item.setOption(result, true);
                                     }
                                 });
-
                             }
                         </script>
                     </div>
