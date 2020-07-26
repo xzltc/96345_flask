@@ -35,6 +35,7 @@ def get_update_time():
     time = res[7].updateTime
     ret_time = str(time.month) + '-' + str(time.day) + ' ' + str(time.hour) + ':' + str(time.minute)
     dict1 = {'updateTime': ret_time}
+    session.close()
     return json.dumps(dict1)
 
 
@@ -133,9 +134,9 @@ def register_scheduler():
     """
     sched = BackgroundScheduler(daemon=True)
     # 时区是个大坑 淦 不要搞什么UTC UTC-8 老老实实用本地时间最简单
-    sched.add_job(insert_feedback, 'cron', day_of_week='0-6', hour='0', minute='30', id='insert_feedback')
-    sched.add_job(update_feedback, 'cron', day_of_week='0-6', hour='8,10,13,14,16,18,21,23', minute='24',
-                  id='update_feedback')
+    sched.add_job(insert_feedback, 'cron', day_of_week='0-6', hour='10', minute='13', id='insert_feedback')
+    # sched.add_job(update_feedback, 'cron', day_of_week='0-6', hour='8,10,13,14,16,18,21,23', minute='24',
+    #               id='update_feedback')
     f = open("scheduler.lock", "wb")
     # noinspection PyBroadException
     try:

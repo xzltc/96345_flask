@@ -14,7 +14,7 @@ def get_db_session(path, echo_mode=False):
     log.debug("------------------数据库连接开始------------------\n")
     try:
         engine = create_engine(path, echo=echo_mode)
-        Session = sessionmaker(bind=engine)
+        Session = sessionmaker(bind=engine, autoflush=False)
         session = Session()
         log.debug("-------------------数据库已连接------------------\n")
         return session
@@ -72,10 +72,11 @@ def insert_feedback(session, all_info):
         for i in all_info:
             feedback = Feedback(merchantId=i['id'], itemId=i['item'], satisfaction=i['satisfaction'],
                                 praise=i['praise'],
-                                criticism=i['criticism'], amount=i['amount'])
+                                criticism=i['criticism'], amount=i['amount'], createTime=tools.get_today())
             log.debug(feedback.__repr__())
             feedback_list.append(feedback)
-        session.add_all(feedback_list)
+        session.bulk_save_objects(feedback_list)
+        # session.add_all(feedback_list)
         session.commit()
         log.info("每日首次插入feedback数据成功！！")
         log.debug("------------------更新反馈结束------------------\n")
@@ -181,7 +182,7 @@ def update_updateTime(session, item_id):
         Time = tools.get_now()
         session.query(Item).filter(Item.id == item_id).update({'updateTime': Time})
         session.commit()
-        log.info("item:%d 最近更新:%s 成功！!" % (item_id, str(time)))
+        log.info("item:%d 最近更新:%s 成功！!" % (item_id, str(Time)))
     except exc.SQLAlchemyError as e:
-        log.error("item:%d 最近更新:%s失败！" % (item_id, str(time)))
+        log.error("item:%d 最近更新:%s失败！" % (item_id, str(Time)))
         log.error(e)

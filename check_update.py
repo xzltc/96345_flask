@@ -89,7 +89,7 @@ def check_merchants(session, item_id, current_all_info, item_merchant_amount):
             for i in range(len(current_all_info)):
                 if increase[t] == current_all_info[i].get('id'):
                     db.insert_merchant(session, current_all_info[i])
-                    log.warning("新增商家->", current_all_info[i])
+                    log.warning("新增商家-> %s" % str(current_all_info[i]))
                     break
 
     if decrease_mount > 0:
