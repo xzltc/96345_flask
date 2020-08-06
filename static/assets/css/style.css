@@ -343,7 +343,7 @@ td:last-child {
 
 html {
     font-size: 18px;
-    line-height: 27px
+    line-height: 20px
 }
 
 @media (min-width: 641px) {
@@ -356,7 +356,7 @@ html {
 
 body {
     color: #5B6F82;
-    font-size: 1rem
+    font-size: 12px;
 }
 
 body,
@@ -478,7 +478,7 @@ h6,
     }
 
     .h2-mobile {
-        font-size: 20px;
+        font-size: 30px;
         line-height: 40px;
         letter-spacing: -0.1px
     }
@@ -538,7 +538,7 @@ h2,
 .h1,
 .h2 {
     margin-top: 48px;
-    margin-bottom: 16px
+    margin-bottom: 0
 }
 
 h3,
@@ -559,7 +559,7 @@ h6,
 
 p {
     margin-top: 0;
-    margin-bottom: 24px
+    /*margin-bottom: 24px*/
 }
 
 dfn,
@@ -689,7 +689,7 @@ label {
 }
 
 .container {
-    max-width: 1128px
+    max-width: 900px
 }
 
 .container-sm {
@@ -1247,7 +1247,7 @@ label {
 
 .site-header {
     position: relative;
-    padding: 24px 0
+    padding: 15px 0
 }
 
 .site-header::before {
@@ -1310,13 +1310,14 @@ label {
 }
 
 .hero-paragraph {
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    padding: 0 13px
+
 }
 
 .hero-media {
     position: relative;
     height: 280px;
-    margin-top: 20px;
     background: #fff;
     border-radius: 4px 4px 0 0
 }
@@ -1409,8 +1410,8 @@ label {
 
 .feature {
     height: 600px;
-    width: 800px;
-    max-width: 800px;
+    width: 850px;
+    max-width: 850px;
     padding: 12px;
     flex-grow: 1
 }

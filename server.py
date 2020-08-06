@@ -3,6 +3,7 @@ from flask import Flask, render_template
 from pyecharts.globals import ThemeType
 from pyecharts import options as opts
 from pyecharts.charts import Bar
+from flask_cors import *
 import check_update
 import atexit
 import fcntl
@@ -20,6 +21,7 @@ logger = tools.get_single_logger()
 
 # Flask web端所有功能封装在server中
 app = Flask(__name__)
+CORS(app, supports_credentials=True)
 
 
 # 默认路由直接渲染主页
