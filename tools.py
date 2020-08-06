@@ -74,7 +74,7 @@ def change_2_pyechart_incresa_format(raw_data):
     ser_id = []
     ser_name = []  # 商户名称
     amo = []
-    for res in raw_data:
+    for res in reversed(raw_data):
         ser_id.append(res[0])
         ser_name.append(res[1])
         amo.append(res[2])
@@ -97,7 +97,8 @@ def get_item_merchants_timelaspes_increase(session, item_id, day_near, day_far):
             if today_info[i].merchantId == previous_day_info[k].merchantId:
                 single_info = (today_info[i].merchantId, today_info[i].merchantName,
                                today_info[i].amount - previous_day_info[k].amount)
-                ret_list.append(single_info)
+                index = get_insert_index(ret_list, single_info)
+                ret_list.insert(index, single_info)
                 break
         # 没匹配到 八说 直接给鸭蛋
         if k == len(previous_day_info) - 1:
@@ -118,3 +119,13 @@ def get_single_logger():
     # 第一个c_level,第二个f_level 控制日志等级
     log = C_logger('./log/sys.log', logging.DEBUG, logging.INFO).get_logger()
     return log
+
+# increase的数据排序
+def get_insert_index(lists, single):
+    if len(lists) != 0:
+        for i in range(len(lists)):
+            if single[2] >= lists[i][2]:
+                return i
+        return len(lists)
+    else:
+        return 0

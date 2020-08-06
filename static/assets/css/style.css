@@ -476,16 +476,19 @@ h6,
         line-height: 46px;
         letter-spacing: -0.2px
     }
+
     .h2-mobile {
-        font-size: 30px;
+        font-size: 20px;
         line-height: 40px;
         letter-spacing: -0.1px
     }
+
     .h3-mobile {
         font-size: 20px;
         line-height: 30px;
         letter-spacing: -0.1px
     }
+
     .h4-mobile,
     .h5-mobile,
     .h6-mobile {
@@ -1302,18 +1305,18 @@ label {
 
 .hero {
     position: relative;
-    padding-top: 40px;
+    /*padding-top: 40px;*/
     overflow: hidden
 }
 
 .hero-paragraph {
-    margin-bottom: 32px
+    margin-bottom: 10px
 }
 
 .hero-media {
     position: relative;
-    height: 200px;
-    margin-top: 40px;
+    height: 280px;
+    margin-top: 20px;
     background: #fff;
     border-radius: 4px 4px 0 0
 }
@@ -1337,15 +1340,17 @@ label {
 
 @media (min-width: 641px) {
     .hero {
-        padding-top: 80px
+        /*padding-top: 80px*/
     }
+
     .hero-paragraph {
-        margin-bottom: 40px;
-        padding-left: 72px;
-        padding-right: 72px
+        margin-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
+
     .hero-media {
-        margin-top: 64px;
+        margin-top: 20px;
         height: 400px
     }
 }
@@ -1372,9 +1377,11 @@ label {
         padding-top: 26px;
         padding-bottom: 26px
     }
+
     .clients ul {
         justify-content: space-around
     }
+
     .clients li {
         width: auto
     }
@@ -1401,7 +1408,7 @@ label {
 }
 
 .feature {
-    height: 400px;
+    height: 600px;
     width: 800px;
     max-width: 800px;
     padding: 12px;
@@ -1441,6 +1448,7 @@ label {
     .features .section-title {
         margin-bottom: 56px
     }
+
     .features .section-inner {
         padding-top: 56px;
         padding-bottom: 64px
@@ -1479,27 +1487,33 @@ label {
         padding-right: 72px;
         margin-bottom: 0
     }
+
     .feature-extended {
         display: flex;
         align-items: center;
         padding-top: 72px
     }
+
     .feature-extended:nth-child(even) .feature-extended-image {
         order: 1
     }
+
     .feature-extended-image,
     .feature-extended-body {
         width: auto;
         padding: 0 24px
     }
+
     .feature-extended-image {
         margin-bottom: 0
     }
+
     .feature-extended-image img,
     .feature-extended-image svg {
         max-width: none;
         width: 320px
     }
+
     .feature-extended-body {
         text-align: left
     }
@@ -1510,10 +1524,12 @@ label {
         padding-left: 40px;
         padding-right: 40px
     }
+
     .feature-extended-image,
     .feature-extended-body {
         padding: 0 40px
     }
+
     .feature-extended-image img,
     .feature-extended-image svg {
         width: 480px
@@ -1576,7 +1592,7 @@ label {
     height: 100%
 }
 
-.pricing-table-inner>* {
+.pricing-table-inner > * {
     position: relative;
     width: 100%
 }
@@ -1640,6 +1656,7 @@ label {
         -webkit-transform: skewY(-12deg);
         transform: skewY(-12deg)
     }
+
     .pricing .section-title {
         margin-bottom: 64px
     }
@@ -1675,8 +1692,8 @@ main {
 
 .section-inner {
     position: relative;
-    padding-top: 48px;
-    padding-bottom: 48px
+    padding-top: 20px;
+    padding-bottom: 20px
 }
 
 @media (min-width: 641px) {
@@ -1729,8 +1746,8 @@ main {
     margin-bottom: 24px
 }
 
-.footer-links li+li,
-.footer-social-links li+li {
+.footer-links li + li,
+.footer-social-links li + li {
     margin-left: 16px
 }
 
@@ -1746,22 +1763,45 @@ main {
     .site-footer-inner {
         justify-content: space-between
     }
+
     .footer-brand,
     .footer-links,
     .footer-social-links,
     .footer-copyright {
         flex: 50%
     }
+
     .footer-brand,
     .footer-copyright {
         justify-content: flex-start
     }
+
     .footer-links,
     .footer-social-links {
         justify-content: flex-end
     }
+
     .footer-links {
         order: 1;
         margin-bottom: 0
     }
+}
+
+.option {
+    display: inline-block;
+    width: auto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    font-family: "PT Serif", serif !important;
+    text-transform: uppercase;
+    color: #00A2B8 !important;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    justify-content: center;
+    padding: 10px 10px 10px 20px;
+    /*height: 48px;*/
+    text-align: center;
+    white-space: nowrap;
 }

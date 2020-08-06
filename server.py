@@ -67,7 +67,8 @@ def item_bar(item_id) -> Bar:
             .set_series_opts(label_opts=opts.LabelOpts(is_show=False), )
             .set_global_opts(title_opts=opts.TitleOpts(title="当前概况"),
                              xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=-15)),
-                             datazoom_opts=opts.DataZoomOpts()
+                             datazoom_opts=[opts.DataZoomOpts(range_start=0, range_end=50),  # 设置起始结束范围
+                                            opts.DataZoomOpts(type_="inside")]  # 增加内缩放
                              )
     )
     session.close()
@@ -93,10 +94,15 @@ def increase_bar(day, item_id) -> Bar:
     result = tools.get_item_merchants_timelaspes_increase(session, item_id, tools.get_today()
                                                           , tools.get_assign_year_date(day))
     c = (
-        Bar()
+        Bar(init_opts=opts.InitOpts(theme=ThemeType.ROMANTIC))
             .add_xaxis(result.get('name'))
             .add_yaxis("新增单数", result.get('increment'))
-            .set_global_opts()
+            .reversal_axis()
+            .set_global_opts(
+            datazoom_opts=[opts.DataZoomOpts(range_start=60, range_end=100, orient="vertical"),
+                           opts.DataZoomOpts(type_="inside", orient="vertical")],
+            tooltip_opts=[opts.TooltipOpts(trigger='axis', axis_pointer_type='shadow')]
+        )
             .set_series_opts(
             label_opts=opts.LabelOpts(is_show=True),
             markpoint_opts=opts.MarkPointOpts(
