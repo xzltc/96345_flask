@@ -1781,7 +1781,6 @@ main {
     cursor: pointer;
     justify-content: center;
     padding: 10px 10px 10px 20px;
-    /*height: 48px;*/
     text-align: center;
     white-space: nowrap;
 }
