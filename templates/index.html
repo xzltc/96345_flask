@@ -9,23 +9,25 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
     <link rel="stylesheet" href="../static/assets/css/style.css">
+    <link rel="stylesheet" href="../static/layui/css/layui.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+    <script src="../static/layui/layui.js"></script>
 </head>
 
 <body class="is-boxed has-animations">
-<div class="body-wrap boxed-container">
-    <header class="site-header">
-        <!-- 顶部导航栏 -->
-        <div class="container">
-            <div class="site-header-inner">
-                <div class="brand header-brand">
-                    <!-- 顶部左侧 -->
-                    <h1 class="m-0">
-                        <a href="#">
-                            <!-- 小圆圈图标 -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <!-- 顶部导航栏 -->
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <!-- 顶部左侧 -->
+                        <h1 class="m-0">
+                            <a href="#">
+                                <!-- 小圆圈图标 -->
+                                <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                 <title>Evelyn</title>
                                 <defs>
                                     <radialGradient cy="0%" fx="50%" fy="0%" r="100%" id="logo-gradient">
@@ -36,49 +38,47 @@
                                 <path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm0-10a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"
                                       fill="url(#logo-gradient)" fill-rule="evenodd"/>
                             </svg>
-                        </a>
-                    </h1>
-                </div>
-                <!-- 左侧功能栏 -->
-                <ul class="header-links list-reset m-0">
-                    <li>
-                        <a id="updateTime" href="#"> </a>
-                    </li>
-                    <li>
-                        <a class="button button-sm button-shadow" href="#">入口二</a>
-                    </li>
-                    <script>
-                        $(function () {
-                            $.ajax({
-                                type:'GET',
-                                url: "http://175.24.42.115:80/serve/updateTime",
-                                {#url: "http://127.0.0.1:5000/serve/updateTime",#}
-                                dataType:'json',
-                                success:function(data){
-                                    var elem = document.getElementById('updateTime');
-                                    elem.innerHTML = data['updateTime'];
-                                    console.log(data['updateTime']);
-                                }
+                            </a>
+                        </h1>
+                    </div>
+                    <!-- 左侧功能栏 -->
+                    <ul class="header-links list-reset m-0">
+                        <li>
+                            <a id="updateTime" href="#"> </a>
+                        </li>
+                        <li>
+                            <a class="button button-sm button-shadow" href="#">入口二</a>
+                        </li>
+                        <script>
+                            $(function() {
+                                $.ajax({
+                                    type: 'GET',
+                                    // url: "http://175.24.42.115:80/serve/updateTime",
+                                    url: "http://127.0.0.1:5000/serve/updateTime",
+                                    dataType: 'json',
+                                    success: function(data) {
+                                        var elem = document.getElementById('updateTime');
+                                        elem.innerHTML = data['updateTime'];
+                                        console.log(data['updateTime']);
+                                    }
+                                })
                             })
-                        })
-                    </script>
-                </ul>
+                        </script>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <section class="hero text-light text-center">
-            <div class="container-sm">
-                <div class="hero-inner">
-                    <h1 class="hero-title h2-mobile mt-0 is-revealing">96345商户信息可视化</h1>
-                    <p class="hero-paragraph is-revealing">A Website to help 96345's merchant
-                        easily checking their work and statistics the information.</p>
-                    <p class="hero-cta is-revealing">
-                        <!-- <a class="button button-secondary button-shadow" href="#">Choose Item Now</a> -->
-                        <select class="option" name="select_item" id="select_item"
-                                onchange="change_item_chart(),change_chart()">
-                            <option value="68">开锁换锁</option>
+        <main>
+            <section class="hero text-light text-center">
+                <div class="container-sm">
+                    <div class="hero-inner">
+                        <h1 class="hero-title h2-mobile mt-0 is-revealing">96345商户信息可视化</h1>
+                        <p class="hero-paragraph is-revealing">A Website to help 96345's merchant easily checking their work and statistics the information.</p>
+                        <p class="hero-cta is-revealing">
+                            <!-- <a class="button button-secondary button-shadow" href="#">Choose Item Now</a> -->
+                            <select class="option" name="select_item" id="select_item" onchange="change_item_chart(),change_chart(),testTable()">
+                            <option value="68" selected='selected'>开锁换锁</option>
                             <option value="1">钟点保姆</option>
                             <option value="3">家电维修</option>
                             <option value="4">清洗拆装</option>
@@ -87,112 +87,46 @@
                             <option value="64">管道疏通</option>
                             <option value="65">水电安装维修</option>
                         </select>
-                    </p>
-                    <div class="hero-media" id="bar" style="width: 100%;">
-                        <script>
-                            var chart_item = echarts.init(document.getElementById('bar'), {
-                                renderer: 'svg'
-                            })
-                            $(
-                                function () {
-                                    $.ajax({
-                                        type: "GET",
-                                        {#url: "http://127.0.0.1:5000/barChart/68",#}
-                                        url: "http://175.24.42.115:80/barChart/68",
-                                        dataType: 'json',
-                                        success: function (result) {
-                                            chart_item.setOption(result);
-                                        }
-                                    });
-                                }
-                            )
-
-                            function change_item_chart() {
-                                var select = document.getElementById("select_item");
-                                var index = select.selectedIndex; //序号，取当前选中选项的序号
-                                var val = select.options[index].value;
-                                $.ajax({
-                                    type: "GET",
-                                    {#url: "http://127.0.0.1:5000/barChart/" + val,#}
-                                    url: "http://175.24.42.115:80/barChart/" + val,
-                                    dataType: 'json',
-                                    success: function (result) {
-                                        chart_item.setOption(result, true);
-                                    }
-                                });
-                            }
-                        </script>
+                        </p>
+                        <div class="hero-media" id="bar" style="width: 100%;">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="features section text-center">
-            <div class="container">
-                <div class="features-inner section-inner has-top-divider">
-                    <div class="features-wrap">
-                        <select class="button button-secondary button-shadow"  id="choose_time"
-                                name="timelapse" onchange="change_chart()">
+            <section class="features section text-center">
+                <div class="container">
+                    <div class="features-inner section-inner has-top-divider">
+                        <div class="features-wrap">
+                            <select class="button button-secondary button-shadow" id="choose_time" name="timelapse" onchange="change_chart()">
                             <option value="1">今天</option>
                             <option value="2">昨天-今天</option>
                             <option value="3">前天-今天</option>
                             <option value="4">大前天-今天</option>
                         </select>
-
-                        <div class="feature is-revealing">
-                            <div class="feature-inner" id="increase_bar">
-                                    <script>
-                                        var chart = echarts.init(document.getElementById('increase_bar'), 'white', {
-                                            renderer: 'canvas'
-                                        });
-
-                                        $(
-                                            function () {
-                                                $.ajax({
-                                                    type: "GET",
-                                                    {#url: "http://127.0.0.1:5000/increaseBarChart/68/1",#}
-                                                    url: "http://175.24.42.115:80/increaseBarChart/68/1",
-                                                    dataType: 'json',
-                                                    success: function (result) {
-                                                        chart.setOption(result);
-                                                    }
-                                                });
-                                            }
-                                        )
-
-                                        function change_chart() {
-                                            var select = document.getElementById("choose_time");
-                                            var index = select.selectedIndex; //序号，取当前选中选项的序号
-                                            var val = select.options[index].value;
-
-                                            var item = document.getElementById("select_item");
-                                            var item_index = item.selectedIndex;
-                                            var item_id = item.options[item_index].value;
-                                            $.ajax({
-                                                type: "GET",
-                                                {#url: "http://127.0.0.1:5000/increaseBarChart/" + item_id + "/" + val,#}
-                                                url: "http://175.24.42.115:80/increaseBarChart/" + item_id + "/" + val,
-                                                dataType: 'json',
-                                                success: function (result) {
-                                                    chart.setOption(result, true);
-                                                }
-                                            });
-                                        }
-                                    </script>
+                            <!-- 增量表 -->
+                            <div class="feature is-revealing">
+                                <div class="feature-inner" id="increase_bar">
+                                </div>
+                            </div>
+                            <!-- 详细表格 -->
+                            <div class="feature is-revealing">
+                                <div id="widthFlag" class="feature-inner">
+                                    <table id="detail" lay-filter="test"></table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="site-footer-inner">
-                <div class="brand footer-brand">
-                    <a href="#">
-                        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            </section>
+        </main>
+        <!-- 底栏 -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer-inner">
+                    <div class="brand footer-brand">
+                        <a href="#">
+                            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                             <title>Evelyn</title>
                             <defs>
                                 <radialGradient cy="0%" fx="50%" fy="0%" r="100%" id="logo-gradient-footer">
@@ -203,53 +137,164 @@
                             <path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm0-10a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"
                                   fill="url(#logo-gradient-footer)" fill-rule="evenodd"/>
                         </svg>
-                    </a>
+                        </a>
+                    </div>
+                    <ul class="footer-links list-reset">
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ's</a>
+                        </li>
+                        <li>
+                            <a href="#">Support</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-social-links list-reset">
+                        <li>
+                            <a href="#">
+                                <span class="screen-reader-text">Facebook</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="screen-reader-text">Twitter</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="screen-reader-text">Google</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+
+                            </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-copyright">Copyright &copy; 2020.Developed By XZL.</div>
                 </div>
-                <ul class="footer-links list-reset">
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#">FAQ's</a>
-                    </li>
-                    <li>
-                        <a href="#">Support</a>
-                    </li>
-                </ul>
-                <ul class="footer-social-links list-reset">
-                    <li>
-                        <a href="#">
-                            <span class="screen-reader-text">Facebook</span>
-                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="screen-reader-text">Twitter</span>
-                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="screen-reader-text">Google</span>
-                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-                <div class="footer-copyright">Copyright &copy; 2020.Developed By XZL.</div>
             </div>
-        </div>
-    </footer>
-</div>
+        </footer>
+    </div>
 
-<script src="../static/assets/js/main.min.js"></script>
+    <script src="../static/assets/js/main.min.js"></script>
+    <script>
+        var chart_item = echarts.init(document.getElementById('bar'), {
+            renderer: 'svg'
+        });
+        var chart = echarts.init(document.getElementById('increase_bar'), 'white', {
+            renderer: 'svg'
+        });
 
+        $(
+            function() {
+                $.ajax({
+                    type: "GET",
+                    url: "/barChart/68",
+                    dataType: 'json',
+                    success: function(result) {
+                        chart_item.setOption(result);
+                    }
+                });
+                $.ajax({
+                    type: "GET",
+                    url: "/increaseBarChart/68/1",
+                    dataType: 'json',
+                    success: function(result) {
+                        chart.setOption(result);
+                    }
+                });
+            },
+
+            testTable()
+        )
+
+        function change_item_chart() {
+            var select = document.getElementById("select_item");
+            var index = select.selectedIndex; //序号，取当前选中选项的序号
+            var val = select.options[index].value;
+            $.ajax({
+                type: "GET",
+                url: "/barChart/" + val,
+                dataType: 'json',
+                success: function(result) {
+                    chart_item.setOption(result, true);
+                }
+            });
+        }
+
+
+        function change_chart() {
+            var select = document.getElementById("choose_time");
+            var index = select.selectedIndex; //序号，取当前选中选项的序号
+            var val = select.options[index].value;
+
+            var item = document.getElementById("select_item");
+            var item_index = item.selectedIndex;
+            var item_id = item.options[item_index].value;
+            $.ajax({
+                type: "GET",
+                url: "/increaseBarChart/" + item_id + "/" + val,
+                dataType: 'json',
+                success: function(result) {
+                    chart.setOption(result, true);
+                }
+            });
+        }
+
+
+        function testTable() {
+            layui.use(['table'], function() {
+                var table = layui.table;
+                var select = document.getElementById("select_item");
+                var index = select.selectedIndex; //序号，取当前选中选项的序号
+                var val = select.options[index].value;
+                var c_width = document.getElementById('widthFlag').offsetWidth - 20;
+
+                table.render({
+                    elem: '#detail',
+                    width: c_width,
+                    height: 500,
+                    url: '/table/' + val, //数据接口
+                    size: 'sm', //小尺寸的表格
+                    cols: [
+                        [ //表头
+                            {
+                                field: 'name',
+                                title: '商户',
+                                // width: 110,
+                            }, {
+                                field: 'amount',
+                                title: '总数',
+                                width: 60,
+                                sort: true
+                            }, {
+                                field: 'satisfaction',
+                                title: '满意',
+                                width: 60,
+                                sort: true
+                            }, {
+                                field: 'praise',
+                                title: '表扬',
+                                width: 55,
+                                sort: true
+                            }, {
+                                field: 'criticism',
+                                title: '批评',
+                                width: 50,
+                                sort: true
+                            }
+                        ]
+                    ]
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>

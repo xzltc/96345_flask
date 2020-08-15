@@ -48,6 +48,14 @@ def get_bar_chart(item_id):
     return c.dump_options_with_quotes()
 
 
+@app.route("/table/<int:item_id>", methods=['GET'])
+def get_item_table(item_id):
+    session = db.get_db_session(db_path)
+    result = db.query_date_feedback_info(session, item_id, tools.get_today())
+    formatted_result = tools.change_2_layui_table_formatted(result)
+    return json.dumps(formatted_result)
+
+
 # 根据类目id获取类目表
 def item_bar(item_id) -> Bar:
     logger.debug("显示总表")
@@ -142,9 +150,9 @@ def register_scheduler():
     """
     sched = BackgroundScheduler(daemon=True)
     # 时区是个大坑 淦 不要搞什么UTC UTC-8 老老实实用本地时间最简单
-    sched.add_job(insert_feedback, 'cron', day_of_week='0-6', hour='10', minute='13', id='insert_feedback')
-    # sched.add_job(update_feedback, 'cron', day_of_week='0-6', hour='8,10,13,14,16,18,21,23', minute='24',
-    #               id='update_feedback')
+    sched.add_job(insert_feedback, 'cron', day_of_week='0-6', hour='0', minute='45', id='insert_feedback')
+    sched.add_job(update_feedback, 'cron', day_of_week='0-6', hour='8,9,10,11,12,13,15,16,17,18,19,20,21,22',
+                  id='update_feedback')
     f = open("scheduler.lock", "wb")
     # noinspection PyBroadException
     try:
