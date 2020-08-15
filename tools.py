@@ -84,6 +84,16 @@ def change_2_pyechart_incresa_format(raw_data):
     return format_data
 
 
+def change_2_layui_table_formatted(raw_data):
+    ret = {"code": 0, "msg": "", "count": 0, "data": []}
+    for el in raw_data:
+        el_data = {"id": el.merchantId, "name": el.merchantName, "amount": el.amount, "satisfaction": el.satisfaction,
+                   "praise": el.praise, "criticism": el.criticism}
+        ret.get("data").append(el_data)
+        ret['count'] += 1
+    return ret
+
+
 # 获取 时间段 某个类目下商户情况
 def get_item_merchants_timelaspes_increase(session, item_id, day_near, day_far):
     previous_day_info = db.query_date_feedback_info(session, item_id, day_far)
@@ -119,6 +129,7 @@ def get_single_logger():
     # 第一个c_level,第二个f_level 控制日志等级
     log = C_logger('./log/sys.log', logging.DEBUG, logging.INFO).get_logger()
     return log
+
 
 # increase的数据排序
 def get_insert_index(lists, single):

@@ -476,19 +476,16 @@ h6,
         line-height: 46px;
         letter-spacing: -0.2px
     }
-
     .h2-mobile {
         font-size: 30px;
         line-height: 40px;
         letter-spacing: -0.1px
     }
-
     .h3-mobile {
         font-size: 20px;
         line-height: 30px;
         letter-spacing: -0.1px
     }
-
     .h4-mobile,
     .h5-mobile,
     .h6-mobile {
@@ -1312,7 +1309,6 @@ label {
 .hero-paragraph {
     margin-bottom: 10px;
     padding: 0 13px
-
 }
 
 .hero-media {
@@ -1343,13 +1339,11 @@ label {
     .hero {
         /*padding-top: 80px*/
     }
-
     .hero-paragraph {
         margin-bottom: 10px;
         padding-left: 30px;
         padding-right: 30px;
     }
-
     .hero-media {
         margin-top: 20px;
         height: 400px
@@ -1378,11 +1372,9 @@ label {
         padding-top: 26px;
         padding-bottom: 26px
     }
-
     .clients ul {
         justify-content: space-around
     }
-
     .clients li {
         width: auto
     }
@@ -1449,7 +1441,6 @@ label {
     .features .section-title {
         margin-bottom: 56px
     }
-
     .features .section-inner {
         padding-top: 56px;
         padding-bottom: 64px
@@ -1488,33 +1479,27 @@ label {
         padding-right: 72px;
         margin-bottom: 0
     }
-
     .feature-extended {
         display: flex;
         align-items: center;
         padding-top: 72px
     }
-
     .feature-extended:nth-child(even) .feature-extended-image {
         order: 1
     }
-
     .feature-extended-image,
     .feature-extended-body {
         width: auto;
         padding: 0 24px
     }
-
     .feature-extended-image {
         margin-bottom: 0
     }
-
     .feature-extended-image img,
     .feature-extended-image svg {
         max-width: none;
         width: 320px
     }
-
     .feature-extended-body {
         text-align: left
     }
@@ -1525,12 +1510,10 @@ label {
         padding-left: 40px;
         padding-right: 40px
     }
-
     .feature-extended-image,
     .feature-extended-body {
         padding: 0 40px
     }
-
     .feature-extended-image img,
     .feature-extended-image svg {
         width: 480px
@@ -1593,7 +1576,7 @@ label {
     height: 100%
 }
 
-.pricing-table-inner > * {
+.pricing-table-inner>* {
     position: relative;
     width: 100%
 }
@@ -1657,7 +1640,6 @@ label {
         -webkit-transform: skewY(-12deg);
         transform: skewY(-12deg)
     }
-
     .pricing .section-title {
         margin-bottom: 64px
     }
@@ -1747,8 +1729,8 @@ main {
     margin-bottom: 24px
 }
 
-.footer-links li + li,
-.footer-social-links li + li {
+.footer-links li+li,
+.footer-social-links li+li {
     margin-left: 16px
 }
 
@@ -1764,24 +1746,20 @@ main {
     .site-footer-inner {
         justify-content: space-between
     }
-
     .footer-brand,
     .footer-links,
     .footer-social-links,
     .footer-copyright {
         flex: 50%
     }
-
     .footer-brand,
     .footer-copyright {
         justify-content: flex-start
     }
-
     .footer-links,
     .footer-social-links {
         justify-content: flex-end
     }
-
     .footer-links {
         order: 1;
         margin-bottom: 0
@@ -1799,6 +1777,7 @@ main {
     color: #00A2B8 !important;
     border: none;
     border-radius: 2px;
+    margin-bottom: 10px;
     cursor: pointer;
     justify-content: center;
     padding: 10px 10px 10px 20px;
